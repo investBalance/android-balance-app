@@ -18,7 +18,7 @@ The following **required** functionality is completed:
   - [] Social Security Screen
   - [] Completion Screen
 - [] Choosing of Stock behaviour (Conservative, Moderate, Aggressive)
-- [] Main stock view page
+- [] Main stock View page
    - [] Navigation Drawer
    - [] Price ticker              [Robinhood library]
    - [] Stock visualization graph [Robinhood library --> Spark]
