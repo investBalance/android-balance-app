@@ -8,7 +8,7 @@ The following **required** functionality is completed:
 
 - [x] Home Activity with the two buttons [Create An Account] & [Log in]
 - [ ] Set-up Procedure
-  - [ ] Email Address Screen
+  - [x] Email Address Screen
   - [ ] Linking different bank accounts [Grid View or List View]
   - [ ] Phone Number Activity Screen
   - [ ] Verify Identity Screen
