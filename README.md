@@ -11,7 +11,7 @@ The following **required** functionality is completed:
   - [x] Email Address Screen
   - [x] Profile screen
   - [x] Legal Name Screen
-  - [ ] Phone Number Activity Screen
+  - [x] Phone Number Activity Screen
   - [ ] Verify Identity Screen
   - [ ] Date of Birth Screen
   - [ ] Residential Address Sceen
