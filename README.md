@@ -33,3 +33,8 @@ The following **additional** features are implemented:
 
 ## Notes
 - Might need to fix the "Create an Account" button for better opacity
+
+## Libraries Used
+- Picasso for loading images 
+- Butterknife from Jake Wharton
+- Phone number input from hbb20
