@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Views.EmailActivity" />
-        <activity android:name=".Views.ProfileActivity"></activity>
+        <activity android:name=".Views.ProfileActivity" />
+        <activity android:name=".Views.NameActivity"></activity>
     </application>
 
 </manifest>

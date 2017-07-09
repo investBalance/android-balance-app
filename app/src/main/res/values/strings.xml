@@ -9,4 +9,5 @@
     <string name="question_email">What is your email address?</string>
 
     <string name="profile_statement">Create Your Profile</string>
+    <string name="name_statement">What is your legal name?</string>
 </resources>

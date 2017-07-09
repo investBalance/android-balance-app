@@ -7,10 +7,12 @@ import android.graphics.Typeface;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
 
@@ -54,6 +56,9 @@ public class EmailActivity extends AppCompatActivity {
     @OnClick(R.id.continueBut)
     public void continueFromEmail() {
         Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+        if(TextUtils.isEmpty(email_editText.getText().toString())) {
+            Toast.makeText(this, "Please enter your email address", Toast.LENGTH_SHORT).show();
+        }
         startActivity(intent);
     }
 }

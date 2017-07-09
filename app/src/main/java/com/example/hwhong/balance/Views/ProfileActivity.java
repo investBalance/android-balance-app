@@ -1,15 +1,18 @@
 package com.example.hwhong.balance.Views;
 
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
 
@@ -53,6 +56,10 @@ public class ProfileActivity extends AppCompatActivity {
 
     @OnClick(R.id.profile_continue)
     public void continueFromProfile() {
-
+        Intent intent = new Intent(getApplicationContext(), NameActivity.class);
+        if(TextUtils.isEmpty(username.getText().toString()) || TextUtils.isEmpty(passowrd.getText().toString())) {
+            Toast.makeText(this, "Please Enter all fields", Toast.LENGTH_SHORT).show();
+        }
+        startActivity(intent);
     }
 }
