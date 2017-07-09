@@ -1,17 +1,25 @@
 package com.example.hwhong.balance;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.hwhong.balance.Views.EmailActivity;
 import com.squareup.picasso.Picasso;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView imageView;
+    //@BindView(R.id.createAccountBut) Button createAccount;
+    @BindView(R.id.logInBut)         Button logIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +31,17 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         this.setContentView(R.layout.activity_main);
 
+        ButterKnife.bind(this);
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
 
+    }
+
+    @OnClick(R.id.createAccountBut)
+    public void createAccount() {
+        Intent intent = new Intent(getApplicationContext(), EmailActivity.class);
+        startActivity(intent);
     }
 }
