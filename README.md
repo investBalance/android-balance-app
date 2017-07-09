@@ -10,7 +10,7 @@ The following **required** functionality is completed:
 - [ ] Set-up Procedure
   - [x] Email Address Screen
   - [x] Profile screen
-  - [ ] Linking different bank accounts [Grid View or List View]
+  - [x] Legal Name Screen
   - [ ] Phone Number Activity Screen
   - [ ] Verify Identity Screen
   - [ ] Date of Birth Screen
@@ -18,6 +18,7 @@ The following **required** functionality is completed:
   - [ ] Citizenship verification Screen
   - [ ] Social Security Screen
   - [ ] Completion Screen
+  - [ ] Linking different bank accounts [Grid View or List View]
 - [ ] Choosing of Stock behaviour (Conservative, Moderate, Aggressive)
 - [ ] Main stock View page
    - [ ] Navigation Drawer
