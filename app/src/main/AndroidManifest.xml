@@ -18,7 +18,9 @@
         </activity>
         <activity android:name=".Views.EmailActivity" />
         <activity android:name=".Views.ProfileActivity" />
-        <activity android:name=".Views.NameActivity"></activity>
+        <activity android:name=".Views.NameActivity" />
+        <activity android:name=".Views.PhoneActivity" />
+        <activity android:name=".Views.VerificationActivity"></activity>
     </application>
 
 </manifest>

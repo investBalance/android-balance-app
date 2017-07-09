@@ -1,18 +1,22 @@
 package com.example.hwhong.balance.Views;
 
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class NameActivity extends AppCompatActivity {
 
@@ -43,5 +47,17 @@ public class NameActivity extends AppCompatActivity {
         lastname.getBackground().mutate().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
         firstname.setHintTextColor(getResources().getColor(R.color.white));
         lastname.setHintTextColor(getResources().getColor(R.color.white));
+    }
+
+    @OnClick(R.id.name_continue)
+    public void continueFromName() {
+        Intent intent = new Intent(getApplicationContext(), PhoneActivity.class);
+        if(TextUtils.isEmpty(firstname.getText().toString()) || TextUtils.isEmpty(lastname.getText().toString())) {
+            Toast.makeText(this, "Please enter all fields", Toast.LENGTH_SHORT).show();
+        }
+        // Only if both fields are present, only then can we proceed
+        if(!TextUtils.isEmpty(firstname.getText().toString()) && !TextUtils.isEmpty(lastname.getText().toString())) {
+            startActivity(intent);
+        }
     }
 }

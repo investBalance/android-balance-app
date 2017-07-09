@@ -10,4 +10,5 @@
 
     <string name="profile_statement">Create Your Profile</string>
     <string name="name_statement">What is your legal name?</string>
+    <string name="phone_statement">What Is Your Phone Number?</string>
 </resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hwhong.balance.Views.PhoneActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:background="@drawable/blur_background"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/phone_continue"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:alpha="0.75"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:text="@string/continue_button_name"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/phone_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="61dp"
+            android:text="@string/phone_statement"
+            android:textColor="@color/white"
+            android:textSize="27dp" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            app:defaultNameCode="US"
+            app:contentColor="@color/white"
+            android:layout_below="@+id/phone_tv"
+            android:layout_alignLeft="@+id/phone_continue"
+            android:layout_alignStart="@+id/phone_continue" />
+
+        <EditText
+            android:id="@+id/phone_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ccp"
+            android:layout_alignEnd="@+id/phone_continue"
+            android:layout_alignRight="@+id/phone_continue"
+            android:layout_alignTop="@+id/ccp"
+            android:layout_toRightOf="@+id/ccp"
+            android:ems="10"
+            android:textSize="24dp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/white"
+            android:hint="Phone Number"
+            android:inputType="phone" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -60,6 +60,8 @@ public class ProfileActivity extends AppCompatActivity {
         if(TextUtils.isEmpty(username.getText().toString()) || TextUtils.isEmpty(passowrd.getText().toString())) {
             Toast.makeText(this, "Please Enter all fields", Toast.LENGTH_SHORT).show();
         }
-        startActivity(intent);
+        if(!TextUtils.isEmpty(username.getText().toString()) && !TextUtils.isEmpty(passowrd.getText().toString())) {
+            startActivity(intent);
+        }
     }
 }
