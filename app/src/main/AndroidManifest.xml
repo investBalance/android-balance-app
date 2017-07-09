@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Views.EmailActivity"></activity>
+        <activity android:name=".Views.EmailActivity" />
+        <activity android:name=".Views.ProfileActivity"></activity>
     </application>
 
 </manifest>

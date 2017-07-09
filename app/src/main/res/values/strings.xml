@@ -7,4 +7,6 @@
     <string name="continue_button_name">Continue</string>
     <string name="email_started">Let\'s Get Started</string>
     <string name="question_email">What is your email address?</string>
+
+    <string name="profile_statement">Create Your Profile</string>
 </resources>

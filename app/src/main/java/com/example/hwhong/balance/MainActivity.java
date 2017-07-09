@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         // Disable the Title bar
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         // for full screen view
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                //WindowManager.LayoutParams.FLAG_FULLSCREEN);
         this.setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);

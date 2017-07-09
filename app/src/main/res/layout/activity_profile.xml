@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.hwhong.balance.Views.EmailActivity">
+    tools:context="com.example.hwhong.balance.Views.ProfileActivity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -17,7 +17,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/continueBut"
+            android:id="@+id/profile_continue"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -30,40 +30,48 @@
             android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/started_tv"
+            android:id="@+id/profile_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="61dp"
-            android:text="@string/email_started"
+            android:text="@string/profile_statement"
             android:textColor="@color/white"
             android:textSize="27dp" />
 
-        <TextView
-            android:id="@+id/question_email"
+        <EditText
+            android:id="@+id/username_et"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/started_tv"
+            android:layout_below="@+id/profile_tv"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:text="@string/question_email"
+            android:layout_marginTop="46dp"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="Balance Username"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="15dp" />
+            android:textSize="24dp" />
 
         <EditText
-            android:id="@+id/email_editText"
+            android:id="@+id/password_et"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/question_email"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="36dp"
-            android:ems="10"
-            android:inputType="textEmailAddress"
             android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="24dp"
-            android:typeface="monospace" />
+            android:layout_below="@+id/username_et"
+            android:layout_alignLeft="@+id/username_et"
+            android:layout_alignStart="@+id/username_et"
+            android:layout_marginTop="17dp" />
+
+
     </RelativeLayout>
 
 </FrameLayout>
