@@ -11,4 +11,10 @@
     <string name="profile_statement">Create Your Profile</string>
     <string name="name_statement">What is your legal name?</string>
     <string name="phone_statement">What Is Your Phone Number?</string>
+    <string name="verify_statement">Verify your Identity</string>
+    <string name="verify_detail_statement">Balance is required by federal law (US Patriot Act) to
+    collect your Social Security Number.</string>
+    <string name="veri_more_info">For more information ask our superhero up top ^</string>
+    <string name="lock_text">Your information is encrypted and securely transmitted using SSL</string>
+
 </resources>

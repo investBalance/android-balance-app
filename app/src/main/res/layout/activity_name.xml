@@ -38,7 +38,7 @@
             android:layout_marginTop="61dp"
             android:text="@string/name_statement"
             android:textColor="@color/white"
-            android:textSize="27dp" />
+            android:textSize="23dp" />
 
         <EditText
             android:id="@+id/firstname_et"
@@ -59,6 +59,9 @@
             android:id="@+id/lastname_et"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/firstname_et"
+            android:layout_alignStart="@+id/firstname_et"
+            android:layout_below="@+id/firstname_et"
             android:layout_marginTop="17dp"
             android:background="@android:color/transparent"
             android:ems="10"
@@ -66,10 +69,7 @@
             android:inputType="textPersonName"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24dp"
-            android:layout_below="@+id/firstname_et"
-            android:layout_alignLeft="@+id/firstname_et"
-            android:layout_alignStart="@+id/firstname_et" />
+            android:textSize="24dp" />
 
 
     </RelativeLayout>
