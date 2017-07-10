@@ -23,7 +23,9 @@
         <activity android:name=".Views.VerificationActivity" />
         <activity android:name=".Views.DobActivity" />
         <activity android:name=".Views.AddressActivity" />
-        <activity android:name=".Views.CitizenshipActivity"></activity>
+        <activity android:name=".Views.CitizenshipActivity" />
+        <activity android:name=".Views.SSNActivity" />
+        <activity android:name=".Views.CompletionActivity"></activity>
     </application>
 
 </manifest>

@@ -20,5 +20,12 @@
     <string name="dob">Date of Birth</string>
     <string name="dob_detail">US federal law requires all financial advisors to collect this information</string>
 
+    <string name="citizenship_statement">US federal law requires Balance to collect this information to help
+    prevent money laundering</string>
+    <string name="complete_detail">That\'s it, you\'re all verified. Continue on forward to choose what values are most
+    important to you and set your risk tolerance. Remember, at Balance we only invest your money in socially
+    responsible investments that align with your values.</string>
+    <string name="hero_completion">Superhero Tip: You can rearrange your value order at anytime</string>
+
 
 </resources>

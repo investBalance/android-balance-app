@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hwhong.balance.Views.CompletionActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:background="@drawable/blur_background"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/completion_continue"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="35dp"
+            android:alpha="0.75"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:text="@string/continue_button_name"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/complete_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:text="You Rock!"
+            android:textColor="@color/white"
+            android:textSize="26dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/complete_detail"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/complete_detail"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:layout_below="@+id/complete_tv"
+            android:layout_marginTop="25dp"
+            android:layout_alignLeft="@+id/completion_continue"
+            android:layout_alignStart="@+id/completion_continue"
+            android:layout_alignRight="@+id/completion_continue"
+            android:layout_alignEnd="@+id/completion_continue" />
+
+        <TextView
+            android:id="@+id/hero_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/complete_detail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:text="@string/hero_completion"
+            android:textColor="@color/yellow"
+            android:textSize="9dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/star_completion"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/star"
+            android:layout_below="@+id/hero_text"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/hero_completion"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/hero_text"
+            android:layout_toRightOf="@+id/hero_text"
+            app:srcCompat="@drawable/hero" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>
