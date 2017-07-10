@@ -16,8 +16,9 @@
     collect your Social Security Number.</string>
     <string name="veri_more_info">For more information ask our superhero up top ^</string>
     <string name="lock_text">Your information is encrypted and securely transmitted using SSL</string>
-    
+
     <string name="dob">Date of Birth</string>
     <string name="dob_detail">US federal law requires all financial advisors to collect this information</string>
+
 
 </resources>

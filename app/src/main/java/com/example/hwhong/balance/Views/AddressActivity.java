@@ -14,15 +14,17 @@ import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
 
+import org.w3c.dom.Text;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class DobActivity extends AppCompatActivity {
+public class AddressActivity extends AppCompatActivity {
 
-    @BindView(R.id.dob_detail) TextView dob_info;
-    @BindView(R.id.dob_tv)     TextView dob;
-    @BindView(R.id.dob_et)     EditText dob_input;
+    @BindView(R.id.address_detail) TextView address_detail;
+    @BindView(R.id.address_tv) TextView address_tv;
+    @BindView(R.id.address_et) EditText address_et;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +34,7 @@ public class DobActivity extends AppCompatActivity {
         // for full screen view
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
         //WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_dob);
+        setContentView(R.layout.activity_address);
 
         ButterKnife.bind(this);
         ActionBar actionBar = getSupportActionBar();
@@ -41,20 +43,23 @@ public class DobActivity extends AppCompatActivity {
         Typeface roboto_light = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
         Typeface roboto_thin = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
 
-        dob.setTypeface(roboto_light); dob_info.setTypeface(roboto_thin); dob_input.setTypeface(roboto_thin);
-        dob_input.getBackground().mutate().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
-        dob_input.setHintTextColor(getResources().getColor(R.color.white));
+        // TextView customize
+        address_detail.setTypeface(roboto_thin); address_tv.setTypeface(roboto_light);
+
+        // EditText customize
+        address_et.setTypeface(roboto_thin);
+        address_et.getBackground().mutate().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+        address_et.setHintTextColor(getResources().getColor(R.color.white));
     }
 
-    @OnClick(R.id.dob_continue)
-    public void continueFromDob(){
-        Intent intent = new Intent(getApplicationContext(), AddressActivity.class);
-        if(TextUtils.isEmpty(dob_input.getText().toString())) {
-            Toast.makeText(getApplicationContext(), "Please enter all fields", Toast.LENGTH_SHORT).show();
+    @OnClick(R.id.address_continue)
+    public void continueFromAddress() {
+        Intent intent = new Intent(getApplicationContext(), CitizenshipActivity.class);
+        if(TextUtils.isEmpty(address_et.getText().toString())) {
+            Toast.makeText(this, "Please enter all fields", Toast.LENGTH_SHORT).show();
         }
-        if(!TextUtils.isEmpty(dob_input.getText().toString())) {
+        if(!TextUtils.isEmpty(address_et.getText().toString())){
             startActivity(intent);
         }
     }
-
 }

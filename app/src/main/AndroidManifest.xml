@@ -21,7 +21,9 @@
         <activity android:name=".Views.NameActivity" />
         <activity android:name=".Views.PhoneActivity" />
         <activity android:name=".Views.VerificationActivity" />
-        <activity android:name=".Views.DobActivity"></activity>
+        <activity android:name=".Views.DobActivity" />
+        <activity android:name=".Views.AddressActivity" />
+        <activity android:name=".Views.CitizenshipActivity"></activity>
     </application>
 
 </manifest>
