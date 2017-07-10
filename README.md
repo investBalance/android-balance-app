@@ -7,18 +7,18 @@ Balance is a saving app.
 The following **required** functionality is completed:
 
 - [x] Home Activity with the two buttons [Create An Account] & [Log in]
-- [ ] Set-up Procedure
+- [x] Set-up Procedure
   - [x] Email Address Screen
   - [x] Profile screen
   - [x] Legal Name Screen
   - [x] Phone Number Activity Screen
-  - [ ] Verify Identity Screen
-  - [ ] Date of Birth Screen
-  - [ ] Residential Address Sceen
-  - [ ] Citizenship verification Screen
-  - [ ] Social Security Screen
-  - [ ] Completion Screen
-  - [ ] Linking different bank accounts [Grid View or List View]
+  - [x] Verify Identity Screen
+  - [x] Date of Birth Screen
+  - [x] Residential Address Sceen
+  - [x] Citizenship verification Screen
+  - [x] Social Security Screen
+  - [x] Completion Screen
+- [ ] Linking different bank accounts [Grid View or List View]
 - [ ] Choosing of Stock behaviour (Conservative, Moderate, Aggressive)
 - [ ] Main stock View page
    - [ ] Navigation Drawer
