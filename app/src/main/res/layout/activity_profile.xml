@@ -53,7 +53,7 @@
             android:inputType="textPersonName"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:textSize="21dp" />
 
         <EditText
             android:id="@+id/password_et"
@@ -65,7 +65,7 @@
             android:inputType="textPassword"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24dp"
+            android:textSize="21dp"
             android:layout_below="@+id/username_et"
             android:layout_alignLeft="@+id/username_et"
             android:layout_alignStart="@+id/username_et"

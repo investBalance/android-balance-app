@@ -44,10 +44,8 @@
             android:id="@+id/verification_detail"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/name_continue"
-            android:layout_alignLeft="@+id/name_continue"
-            android:layout_alignRight="@+id/name_continue"
-            android:layout_alignStart="@+id/name_continue"
+            android:layout_alignLeft="@+id/verification_continue"
+            android:layout_alignStart="@+id/verification_continue"
             android:layout_below="@+id/verification_tv"
             android:layout_marginTop="12dp"
             android:text="@string/verify_detail_statement"
@@ -71,23 +69,23 @@
             android:id="@+id/lock"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:layout_marginBottom="17dp"
-            android:alpha="0.5"
-            app:srcCompat="@drawable/lock"
-            android:layout_above="@+id/name_continue"
             android:layout_alignLeft="@+id/more_info"
-            android:layout_alignStart="@+id/more_info" />
+            android:layout_alignStart="@+id/more_info"
+            android:layout_alignTop="@+id/lock_text"
+            android:alpha="0.5"
+            app:srcCompat="@drawable/lock" />
 
         <TextView
             android:id="@+id/lock_text"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/lock"
+            android:layout_above="@+id/verification_continue"
             android:layout_alignEnd="@+id/more_info"
-            android:layout_alignRight="@+id/more_info"
-            android:layout_marginEnd="11dp"
-            android:layout_marginRight="11dp"
 
+            android:layout_alignRight="@+id/more_info"
+            android:layout_marginBottom="25dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
             android:text="@string/lock_text"
             android:textColor="@color/white"
             android:textSize="9sp" />
@@ -96,13 +94,13 @@
             android:id="@+id/hero"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="13dp"
-            app:srcCompat="@drawable/hero"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="25dp"
             android:layout_marginRight="25dp"
-            android:layout_marginEnd="25dp" />
+            android:layout_marginTop="13dp"
+            app:srcCompat="@drawable/hero" />
 
 
     </RelativeLayout>

@@ -62,7 +62,7 @@
             android:inputType="textEmailAddress"
             android:background="@android:color/transparent"
             android:textColor="@color/white"
-            android:textSize="24dp"
+            android:textSize="21dp"
             android:typeface="monospace" />
     </RelativeLayout>
 

@@ -61,7 +61,7 @@
             android:layout_alignTop="@+id/ccp"
             android:layout_toRightOf="@+id/ccp"
             android:ems="10"
-            android:textSize="24dp"
+            android:textSize="21dp"
             android:background="@android:color/transparent"
             android:textColor="@color/white"
             android:hint="Phone Number"
