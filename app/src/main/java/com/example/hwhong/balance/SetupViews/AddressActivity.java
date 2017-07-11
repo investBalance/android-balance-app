@@ -1,4 +1,4 @@
-package com.example.hwhong.balance.Views;
+package com.example.hwhong.balance.SetupViews;
 
 import android.content.Intent;
 import android.graphics.PorterDuff;
@@ -13,8 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
-
-import org.w3c.dom.Text;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -16,16 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Views.EmailActivity" />
-        <activity android:name=".Views.ProfileActivity" />
-        <activity android:name=".Views.NameActivity" />
-        <activity android:name=".Views.PhoneActivity" />
-        <activity android:name=".Views.VerificationActivity" />
-        <activity android:name=".Views.DobActivity" />
-        <activity android:name=".Views.AddressActivity" />
-        <activity android:name=".Views.CitizenshipActivity" />
-        <activity android:name=".Views.SSNActivity" />
-        <activity android:name=".Views.CompletionActivity"></activity>
+        <activity android:name=".SetupViews.EmailActivity" />
+        <activity android:name=".SetupViews.ProfileActivity" />
+        <activity android:name=".SetupViews.NameActivity" />
+        <activity android:name=".SetupViews.PhoneActivity" />
+        <activity android:name=".SetupViews.VerificationActivity" />
+        <activity android:name=".SetupViews.DobActivity" />
+        <activity android:name=".SetupViews.AddressActivity" />
+        <activity android:name=".SetupViews.CitizenshipActivity" />
+        <activity android:name=".SetupViews.SSNActivity" />
+        <activity android:name=".SetupViews.CompletionActivity" />
+        <activity android:name=".PostSetUp.ValuesActivity"></activity>
     </application>
 
 </manifest>

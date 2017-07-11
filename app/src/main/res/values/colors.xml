@@ -8,4 +8,7 @@
     <color name="black">#000</color>
     <color name="white">#fff</color>
     <color name="yellow">#FFECB3</color>
+
+    <color name="start_background_purple">#633CF3</color>
+    <color name="end_background_purple">#3A2396</color>
 </resources>

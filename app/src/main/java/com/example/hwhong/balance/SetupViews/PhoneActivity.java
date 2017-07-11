@@ -1,4 +1,4 @@
-package com.example.hwhong.balance.Views;
+package com.example.hwhong.balance.SetupViews;
 
 import android.content.Intent;
 import android.graphics.PorterDuff;
@@ -13,16 +13,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
+import com.hbb20.CountryCodePicker;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class DobActivity extends AppCompatActivity {
+public class PhoneActivity extends AppCompatActivity {
 
-    @BindView(R.id.dob_detail) TextView dob_info;
-    @BindView(R.id.dob_tv)     TextView dob;
-    @BindView(R.id.dob_et)     EditText dob_input;
+    @BindView(R.id.ccp) CountryCodePicker ccp;
+    @BindView(R.id.phone_tv) TextView phone;
+    @BindView(R.id.phone_et) EditText phone_number;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,29 +33,30 @@ public class DobActivity extends AppCompatActivity {
         // for full screen view
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
         //WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_dob);
-
+        setContentView(R.layout.activity_phone);
         ButterKnife.bind(this);
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
         Typeface roboto_light = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
         Typeface roboto_thin = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
 
-        dob.setTypeface(roboto_light); dob_info.setTypeface(roboto_thin); dob_input.setTypeface(roboto_thin);
-        dob_input.getBackground().mutate().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
-        dob_input.setHintTextColor(getResources().getColor(R.color.white));
+        phone.setTypeface(roboto_light);
+        ccp.setTypeFace(roboto_light);
+        phone_number.setTypeface(roboto_thin);
+        phone_number.getBackground().mutate().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+        phone_number.setHintTextColor(getResources().getColor(R.color.white));
     }
 
-    @OnClick(R.id.dob_continue)
-    public void continueFromDob(){
-        Intent intent = new Intent(getApplicationContext(), AddressActivity.class);
-        if(TextUtils.isEmpty(dob_input.getText().toString())) {
-            Toast.makeText(getApplicationContext(), "Please enter all fields", Toast.LENGTH_SHORT).show();
+    @OnClick(R.id.phone_continue)
+    public void continueFromPhone() {
+        Intent intent = new Intent(getApplicationContext(), VerificationActivity.class);
+        if(TextUtils.isEmpty(phone_number.getText().toString())) {
+            Toast.makeText(this, "Please Enter all fields", Toast.LENGTH_SHORT).show();
         }
-        if(!TextUtils.isEmpty(dob_input.getText().toString())) {
+        if(!TextUtils.isEmpty(phone_number.getText().toString())) {
             startActivity(intent);
         }
     }
-
 }

@@ -1,4 +1,4 @@
-package com.example.hwhong.balance.Views;
+package com.example.hwhong.balance.SetupViews;
 
 import android.content.Intent;
 import android.graphics.Typeface;

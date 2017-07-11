@@ -1,4 +1,4 @@
-package com.example.hwhong.balance.Views;
+package com.example.hwhong.balance.SetupViews;
 
 import android.content.Intent;
 import android.graphics.PorterDuff;
@@ -18,11 +18,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class NameActivity extends AppCompatActivity {
+public class SSNActivity extends AppCompatActivity {
 
-    @BindView(R.id.firstname_et) EditText firstname;
-    @BindView(R.id.lastname_et)  EditText lastname;
-    @BindView(R.id.name_tv)      TextView name;
+    @BindView(R.id.ssn_detail) TextView detail;
+    @BindView(R.id.ssn_tv)     TextView textView;
+    @BindView(R.id.ssn_et)     EditText ssn_input;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class NameActivity extends AppCompatActivity {
         // for full screen view
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
         //WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_name);
+        setContentView(R.layout.activity_ssn);
 
         ButterKnife.bind(this);
         ActionBar actionBar = getSupportActionBar();
@@ -41,22 +41,18 @@ public class NameActivity extends AppCompatActivity {
         Typeface roboto_light = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
         Typeface roboto_thin = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
 
-        name.setTypeface(roboto_light);
-        firstname.setTypeface(roboto_thin); lastname.setTypeface(roboto_thin);
-        firstname.getBackground().mutate().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
-        lastname.getBackground().mutate().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
-        firstname.setHintTextColor(getResources().getColor(R.color.white));
-        lastname.setHintTextColor(getResources().getColor(R.color.white));
+        textView.setTypeface(roboto_light); detail.setTypeface(roboto_thin); ssn_input.setTypeface(roboto_thin);
+        ssn_input.getBackground().mutate().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+        ssn_input.setHintTextColor(getResources().getColor(R.color.white));
     }
 
-    @OnClick(R.id.name_continue)
-    public void continueFromName() {
-        Intent intent = new Intent(getApplicationContext(), PhoneActivity.class);
-        if(TextUtils.isEmpty(firstname.getText().toString()) || TextUtils.isEmpty(lastname.getText().toString())) {
+    @OnClick(R.id.ssn_continue)
+    public void continueFromSSN() {
+        Intent intent = new Intent(getApplicationContext(), CompletionActivity.class);
+        if(TextUtils.isEmpty(ssn_input.getText().toString())) {
             Toast.makeText(this, "Please enter all fields", Toast.LENGTH_SHORT).show();
         }
-        // Only if both fields are present, only then can we proceed
-        if(!TextUtils.isEmpty(firstname.getText().toString()) && !TextUtils.isEmpty(lastname.getText().toString())) {
+        if(!TextUtils.isEmpty(ssn_input.getText().toString())) {
             startActivity(intent);
         }
     }

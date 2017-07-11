@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.hwhong.balance.Views.CompletionActivity">
+    tools:context="com.example.hwhong.balance.SetupViews.CompletionActivity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -69,11 +69,12 @@
 
         <ImageView
             android:id="@+id/star_completion"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             app:srcCompat="@drawable/star"
             android:layout_below="@+id/hero_text"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp" />
 
         <ImageView
             android:id="@+id/hero_completion"

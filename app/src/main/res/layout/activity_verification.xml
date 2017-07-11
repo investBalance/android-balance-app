@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.hwhong.balance.Views.VerificationActivity">
+    tools:context="com.example.hwhong.balance.SetupViews.VerificationActivity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -101,6 +101,14 @@
             android:layout_marginRight="25dp"
             android:layout_marginTop="13dp"
             app:srcCompat="@drawable/hero" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/privacy"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
 
 
     </RelativeLayout>

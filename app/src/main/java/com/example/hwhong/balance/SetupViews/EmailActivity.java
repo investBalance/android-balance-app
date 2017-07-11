@@ -1,7 +1,6 @@
-package com.example.hwhong.balance.Views;
+package com.example.hwhong.balance.SetupViews;
 
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBar;
@@ -9,14 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
-
-import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

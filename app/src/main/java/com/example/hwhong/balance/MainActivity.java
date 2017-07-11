@@ -5,12 +5,10 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageView;
 
-import com.example.hwhong.balance.Views.EmailActivity;
-import com.squareup.picasso.Picasso;
+import com.example.hwhong.balance.PostSetUp.ValuesActivity;
+import com.example.hwhong.balance.SetupViews.EmailActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -41,7 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.createAccountBut)
     public void createAccount() {
-        Intent intent = new Intent(getApplicationContext(), EmailActivity.class);
+        //Intent intent = new Intent(getApplicationContext(), EmailActivity.class);
+        //startActivity(intent);
+
+        Intent intent = new Intent(getApplicationContext(), ValuesActivity.class);
         startActivity(intent);
     }
 }
