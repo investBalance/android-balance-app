@@ -38,3 +38,4 @@ The following **additional** features are implemented:
 - Picasso for loading images 
 - Butterknife from Jake Wharton
 - Phone number input from hbb20
+- drag and drop list view from woxblom
