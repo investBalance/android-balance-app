@@ -64,8 +64,8 @@
             android:layout_marginTop="18dp"
             android:text="@string/hero_completion"
             android:textColor="@color/yellow"
-            android:textSize="9dp"
-            android:textStyle="bold"/>
+            android:textSize="10dp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/star_completion"

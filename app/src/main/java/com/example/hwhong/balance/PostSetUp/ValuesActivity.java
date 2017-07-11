@@ -15,6 +15,7 @@ import butterknife.ButterKnife;
 public class ValuesActivity extends AppCompatActivity {
 
     @BindView(R.id.values) TextView heading;
+    @BindView(R.id.values_explain) TextView explanation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +36,6 @@ public class ValuesActivity extends AppCompatActivity {
         Typeface dinot = Typeface.createFromAsset(getAssets(), "fonts/DINOT-Regular.ttf");
 
         heading.setTypeface(dinot);
+        explanation.setTypeface(roboto_thin);
     }
 }
