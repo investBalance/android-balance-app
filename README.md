@@ -34,6 +34,7 @@ The following **additional** features are implemented:
 
 ## Notes
 - Might need to fix the "Create an Account" button for better opacity
+- draggable list view alternatives? currently unable to collapse the list items. Will look into it.
 
 ## Libraries Used
 - Picasso for loading images 
