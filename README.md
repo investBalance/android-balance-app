@@ -18,6 +18,7 @@ The following **required** functionality is completed:
   - [x] Citizenship verification Screen
   - [x] Social Security Screen
   - [x] Completion Screen
+- [x] Choosing of personal values
 - [ ] Linking different bank accounts [Grid View or List View]
 - [ ] Choosing of Stock behaviour (Conservative, Moderate, Aggressive)
 - [ ] Main stock View page
@@ -38,4 +39,4 @@ The following **additional** features are implemented:
 - Picasso for loading images 
 - Butterknife from Jake Wharton
 - Phone number input from hbb20
-- drag and drop list view from woxblom
+- drag and drop list view from paul burke
