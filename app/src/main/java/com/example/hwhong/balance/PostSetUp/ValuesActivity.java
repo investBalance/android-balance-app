@@ -1,18 +1,20 @@
 package com.example.hwhong.balance.PostSetUp;
 
 import android.graphics.Typeface;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.widget.TextView;
 
+import com.example.hwhong.balance.DraggableListView.RecyclerListFragment;
 import com.example.hwhong.balance.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ValuesActivity extends AppCompatActivity {
+public class ValuesActivity extends AppCompatActivity{
 
     @BindView(R.id.values) TextView heading;
     @BindView(R.id.values_explain) TextView explanation;
@@ -37,5 +39,11 @@ public class ValuesActivity extends AppCompatActivity {
 
         heading.setTypeface(dinot);
         explanation.setTypeface(roboto_thin);
+
+        Fragment fragment = new RecyclerListFragment();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.content, fragment)
+                .addToBackStack(null)
+                .commit();
     }
 }

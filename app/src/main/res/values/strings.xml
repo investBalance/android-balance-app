@@ -32,4 +32,5 @@
     <string name="values_explain">Drag to place in order. Values at the top will be considered first when
     selecting your investments. </string>
 
+    <string name="values">VALUES</string>
 </resources>
