@@ -39,10 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.createAccountBut)
     public void createAccount() {
-        //Intent intent = new Intent(getApplicationContext(), EmailActivity.class);
-        //startActivity(intent);
-
-        Intent intent = new Intent(getApplicationContext(), ValuesActivity.class);
+        Intent intent = new Intent(getApplicationContext(), EmailActivity.class);
         startActivity(intent);
     }
 }

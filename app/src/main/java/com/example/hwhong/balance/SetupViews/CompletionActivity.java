@@ -1,5 +1,6 @@
 package com.example.hwhong.balance.SetupViews;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -7,10 +8,12 @@ import android.os.Bundle;
 import android.view.Window;
 import android.widget.TextView;
 
+import com.example.hwhong.balance.PostSetUp.ValuesActivity;
 import com.example.hwhong.balance.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class CompletionActivity extends AppCompatActivity {
 
@@ -39,5 +42,11 @@ public class CompletionActivity extends AppCompatActivity {
         main.setTypeface(roboto_light);
         detail.setTypeface(roboto_thin);
         hero_text.setTypeface(roboto_thin);
+    }
+
+    @OnClick(R.id.completion_continue)
+    public void continueFromCompletion() {
+        Intent intent = new Intent(getApplicationContext(), ValuesActivity.class);
+        startActivity(intent);
     }
 }
