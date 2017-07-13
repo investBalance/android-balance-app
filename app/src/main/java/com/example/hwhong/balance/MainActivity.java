@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.widget.Button;
 
+import com.example.hwhong.balance.PostSetUp.PagerActivity;
 import com.example.hwhong.balance.PostSetUp.ValuesActivity;
 import com.example.hwhong.balance.SetupViews.EmailActivity;
 
@@ -38,7 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.createAccountBut)
     public void createAccount() {
-        Intent intent = new Intent(getApplicationContext(), EmailActivity.class);
+        //Intent intent = new Intent(getApplicationContext(), EmailActivity.class);
+        //startActivity(intent);
+
+        Intent intent = new Intent(getApplicationContext(), PagerActivity.class);
         startActivity(intent);
     }
 }

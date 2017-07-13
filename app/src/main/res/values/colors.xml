@@ -11,4 +11,13 @@
 
     <color name="start_background_purple">#633CF3</color>
     <color name="end_background_purple">#3A2396</color>
+
+    <color name="start_conservative_background">#43C4BE</color>
+    <color name="end_conservative_background">#6143F4</color>
+
+    <color name="start_moderate_background">#734892</color>
+    <color name="end_moderate_background">#331E74</color>
+
+    <color name="start_aggressive_background">#B74E5F</color>
+    <color name="end_aggressive_background">#4F2FAC</color>
 </resources>
