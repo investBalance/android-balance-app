@@ -16,7 +16,6 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    //@BindView(R.id.createAccountBut) Button createAccount;
     @BindView(R.id.logInBut)         Button logIn;
 
     @Override
