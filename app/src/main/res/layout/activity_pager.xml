@@ -8,4 +8,5 @@
     android:id="@+id/pager"
     tools:context="com.example.hwhong.balance.PostSetUp.PagerActivity">
 
+
 </android.support.v4.view.ViewPager>

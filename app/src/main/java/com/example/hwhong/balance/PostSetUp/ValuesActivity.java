@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
 
 public class ValuesActivity extends AppCompatActivity{
 
-    @BindView(R.id.values) TextView heading;
+    @BindView(R.id.values)         TextView heading;
     @BindView(R.id.values_explain) TextView explanation;
 
     @Override

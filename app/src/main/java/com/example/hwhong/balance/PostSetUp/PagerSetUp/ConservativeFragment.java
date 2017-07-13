@@ -1,14 +1,21 @@
 package com.example.hwhong.balance.PostSetUp.PagerSetUp;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.hwhong.balance.R;
+
+import org.w3c.dom.Text;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +36,10 @@ public class ConservativeFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    // View Elements
+    @BindView(R.id.conservative_tv)            TextView heading;
+    @BindView(R.id.heading_under_conservative) TextView heading_under;
 
     public ConservativeFragment() {
         // Required empty public constructor
@@ -65,7 +76,16 @@ public class ConservativeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_conservative, container, false);
+        View view = inflater.inflate(R.layout.fragment_conservative, container, false);
+        ButterKnife.bind(this, view);
+
+        Typeface dinot = Typeface.createFromAsset(getActivity().getAssets(), "fonts/DINOT-Regular.ttf");
+        heading.setTypeface(dinot);
+        heading_under.setTypeface(dinot);
+
+
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
