@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.example.hwhong.balance.PostSetUp.PortfolioUIComponents.RandomizedAdapter;
 import com.example.hwhong.balance.R;
+import com.github.lzyzsd.circleprogress.DonutProgress;
 import com.robinhood.spark.SparkView;
 
 import org.w3c.dom.Text;
@@ -70,6 +71,17 @@ public class ConservativeFragment extends Fragment {
     @BindView(R.id.bar2_text)                   TextView bar2_text;
     @BindView(R.id.bar1_value)                  TextView bar1_value;
     @BindView(R.id.bar2_value)                  TextView bar2_value;
+
+    @BindView(R.id.pie1_text_con)               TextView pie1_text_con;
+    @BindView(R.id.pie2_text_con)               TextView pie2_text_con;
+    @BindView(R.id.pie3_text_con)               TextView pie3_text_con;
+    @BindView(R.id.pie4_text_con)               TextView pie4_text_con;
+
+    @BindView(R.id.donut_animal_con)            DonutProgress donut_animal;
+    @BindView(R.id.donut_environment_con)       DonutProgress donut_environment;
+    @BindView(R.id.donut_sustainable_con)       DonutProgress donut_sustainable;
+    @BindView(R.id.donut_peace_con)             DonutProgress donut_peace;
+
 
     public ConservativeFragment() {
         // Required empty public constructor

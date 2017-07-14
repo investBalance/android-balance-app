@@ -80,14 +80,16 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="6dp"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="5dp"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/heading_under_conservative"
         app:spark_animateChanges="true"
         app:spark_lineColor="@color/spark_view_color"
-        app:spark_scrubEnabled="true" />
+        app:spark_scrubEnabled="true"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2" />
 
     <info.hoang8f.android.segmented.SegmentedGroup xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
         android:id="@+id/seg_con"
@@ -200,6 +202,114 @@
         tools:layout_editor_absoluteY="350dp"
         android:layout_marginRight="42dp"
         app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bar1_conservative"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/pie1_text_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="8dp"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="290dp" />
+
+        <TextView
+            android:id="@+id/pie2_text_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="8dp"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="290dp" />
+
+        <TextView
+            android:id="@+id/pie3_text_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="8dp"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="209dp"
+            tools:layout_editor_absoluteY="290dp" />
+
+        <TextView
+            android:id="@+id/pie4_text_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="284dp"
+            tools:layout_editor_absoluteY="290dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/linearLayout2">
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/donut_animal_con"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="8dp"
+            app:donut_inner_drawable="@drawable/small_animal"
+            app:donut_text=""
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="220dp" />
+
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/donut_environment_con"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="8dp"
+            app:donut_inner_drawable="@drawable/small_environment"
+            app:donut_text=""
+            app:layout_constraintLeft_toRightOf="@+id/donut_animal__con"
+            tools:layout_editor_absoluteY="220dp" />
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/donut_peace_con"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="8dp"
+            app:donut_inner_drawable="@drawable/small_peace"
+            app:donut_text=""
+            app:layout_constraintLeft_toRightOf="@+id/donut_environment_con"
+            tools:layout_editor_absoluteY="220dp" />
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/donut_sustainable_con"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="8dp"
+            app:donut_inner_drawable="@drawable/small_sustainable"
+            app:donut_text=""
+            app:layout_constraintLeft_toRightOf="@+id/donut_peace_con"
+            tools:layout_editor_absoluteY="220dp" />
+
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>
