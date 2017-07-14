@@ -37,9 +37,17 @@ The following **additional** features are implemented:
 - draggable list view alternatives? currently unable to collapse the list items. Will look into it.
 
 ## Libraries Used
-- Picasso for loading images 
-- Butterknife from Jake Wharton
-- Phone number input from hbb20
-- drag and drop list view from paul burke
-- spark from Robinhood for graphical stock views
-- segmented radio buttons from kaopiz
+- Butterknife from                  **_Jake Wharton_**
+  http://jakewharton.github.io/butterknife/
+  
+- Phone number input                **_hbb20_**
+  https://github.com/hbb20/CountryCodePickerProject
+  
+- drag and drop list view           **_paul burke_**
+  https://github.com/iPaulPro/Android-ItemTouchHelper-Demo
+  
+- Graphical stock views             **_Robinhood_**
+  https://github.com/robinhood/spark
+  
+- segmented radio buttons           **_kaopiz_**
+  https://github.com/Kaopiz/android-segmented-control
