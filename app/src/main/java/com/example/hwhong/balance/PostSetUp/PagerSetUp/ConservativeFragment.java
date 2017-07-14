@@ -1,9 +1,13 @@
 package com.example.hwhong.balance.PostSetUp.PagerSetUp;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +21,8 @@ import com.example.hwhong.balance.R;
 import com.robinhood.spark.SparkView;
 
 import org.w3c.dom.Text;
+
+import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -57,7 +63,13 @@ public class ConservativeFragment extends Fragment {
     @BindView(R.id.five_con)                    RadioButton five;
 
     @BindView(R.id.seg_con)                     SegmentedGroup segmentedGroup;
-    @BindView(R.id.progressBar)                 ProgressBar bar;
+    @BindView(R.id.bar1_conservative)           ProgressBar bar1;
+    @BindView(R.id.bar2_conservative)           ProgressBar bar2;
+
+    @BindView(R.id.bar1_text)                   TextView bar1_text;
+    @BindView(R.id.bar2_text)                   TextView bar2_text;
+    @BindView(R.id.bar1_value)                  TextView bar1_value;
+    @BindView(R.id.bar2_value)                  TextView bar2_value;
 
     public ConservativeFragment() {
         // Required empty public constructor
@@ -81,6 +93,7 @@ public class ConservativeFragment extends Fragment {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -96,24 +109,47 @@ public class ConservativeFragment extends Fragment {
         sparkView.setAdapter(adapter);
 
         //segmentedGroup.setTintColor(getResources().getColor(R.color.yellow), getResources().getColor(R.color.white));
-        bar.setMax(100);
-        bar.setVisibility(View.VISIBLE);
-        bar.setProgress(35);
+        bar1.setMax(100);
+        bar1.setVisibility(View.VISIBLE);
+        bar1.setProgress(35);
+        bar1.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
+
+        bar2.setMax(100);
+        bar1.setVisibility(View.VISIBLE);
+        bar2.setProgress(75);
+        bar2.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
+
+        bar1_text.setTypeface(dinot); bar2_text.setTypeface(dinot);
+        bar1_value.setTypeface(dinot); bar2_value.setTypeface(dinot);
 
         return view;
     }
 
     @OnClick(R.id.one_con)
-    public void randomize1() {adapter.randomize();}
+    public void randomize1() {adapter.randomize(); randomizeTexts();}
     @OnClick(R.id.two_con)
-    public void randomize2() {adapter.randomize();}
+    public void randomize2() {adapter.randomize(); randomizeTexts();}
     @OnClick(R.id.three_con)
-    public void randomize3() {adapter.randomize();}
+    public void randomize3() {adapter.randomize(); randomizeTexts();}
     @OnClick(R.id.four_con)
-    public void randomize4() {adapter.randomize();}
+    public void randomize4() {adapter.randomize(); randomizeTexts();}
     @OnClick(R.id.five_con)
-    public void randomize5() {adapter.randomize();}
+    public void randomize5() {adapter.randomize(); randomizeTexts();}
 
+    private void randomizeTexts() {
+        Random random = new Random();
+
+        // Value texts and progress
+        int value = random.nextInt(750);
+        bar1_value.setText("$" + value);
+        bar1.setProgress(value/10);
+
+        // Projected texts and progress
+        int projected = random.nextInt(1001);
+        while(value > projected) projected = random.nextInt(1001);
+        bar2.setProgress(projected/10);
+        bar2_value.setText("$"+projected);
+    }
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated

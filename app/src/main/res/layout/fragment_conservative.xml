@@ -6,6 +6,20 @@
     android:background="@drawable/conservative_background"
     tools:context="com.example.hwhong.balance.PostSetUp.PagerSetUp.ConservativeFragment">
 
+    <ProgressBar
+        android:id="@+id/bar2_conservative"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="17dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/seg_con"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:visibility="visible" />
+
     <Button
         android:id="@+id/phone_continue"
         android:layout_width="300dp"
@@ -61,88 +75,131 @@
     <com.robinhood.spark.SparkView
         android:id="@+id/conservative_sparkview"
         android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="8dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/heading_under_conservative"
         app:spark_animateChanges="true"
         app:spark_lineColor="@color/spark_view_color"
-        app:spark_scrubEnabled="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:spark_scrubEnabled="true" />
 
-    <info.hoang8f.android.segmented.SegmentedGroup
-        xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    <info.hoang8f.android.segmented.SegmentedGroup xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
         android:id="@+id/seg_con"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:layout_margin="10dp"
-        android:orientation="horizontal"
-        segmentedgroup:sc_border_width="2dp"
-        segmentedgroup:sc_corner_radius="10dp"
-        android:layout_marginLeft="8dp"
-        segmentedgroup:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        segmentedgroup:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="8dp"
-        segmentedgroup:layout_constraintBottom_toTopOf="@+id/phone_continue"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp">
+        android:orientation="horizontal"
+        segmentedgroup:layout_constraintBottom_toTopOf="@+id/phone_continue"
+        segmentedgroup:layout_constraintLeft_toLeftOf="parent"
+        segmentedgroup:layout_constraintRight_toRightOf="parent"
+        segmentedgroup:sc_border_width="2dp"
+        segmentedgroup:sc_corner_radius="10dp">
 
         <RadioButton
             android:id="@+id/one_con"
-            android:layout_width="wrap_content"
+            style="@style/RadioButton"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:text="1m"
-            style="@style/RadioButton" />
+            android:text="1m" />
 
         <RadioButton
             android:id="@+id/two_con"
-            android:layout_width="wrap_content"
+            style="@style/RadioButton"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:text="3m"
-            style="@style/RadioButton" />
+            android:text="3m" />
 
         <RadioButton
             android:id="@+id/three_con"
-            android:layout_width="wrap_content"
+            style="@style/RadioButton"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:text="6m"
-            style="@style/RadioButton" />
+            android:text="6m" />
 
         <RadioButton
             android:id="@+id/four_con"
-            android:layout_width="wrap_content"
+            style="@style/RadioButton"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:text="1y"
-            style="@style/RadioButton" />
+            android:text="1y" />
 
         <RadioButton
             android:id="@+id/five_con"
-            android:layout_width="wrap_content"
+            style="@style/RadioButton"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:text="3y"
-            style="@style/RadioButton" />
+            android:text="3y" />
     </info.hoang8f.android.segmented.SegmentedGroup>
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/bar1_conservative"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="346dp"
+        android:layout_width="300dp"
         android:layout_height="20dp"
-        android:visibility="visible"
-
-        tools:visibility="visible"
+        android:layout_marginBottom="28dp"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/bar2_conservative"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/seg_con" />
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/bar1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/bar1_conservative"
+        android:textColor="@color/white"
+        android:layout_marginLeft="42dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:id="@+id/bar2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Projected"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/bar2_conservative"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteY="349dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="42dp" />
+
+    <TextView
+        android:id="@+id/bar1_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="42dp"
+        android:text="$944.49"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/bar1_conservative"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/bar2_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$1144.49"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/bar2_conservative"
+        tools:layout_editor_absoluteY="350dp"
+        android:layout_marginRight="42dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
