@@ -219,19 +219,21 @@
             android:id="@+id/pie1_text_con"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="8dp"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="46dp"
-            tools:layout_editor_absoluteY="290dp" />
+            android:text="10"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="26dp" />
 
         <TextView
             android:id="@+id/pie2_text_con"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="8dp"
-            android:text="TextView"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="10"
+            android:textColor="@color/white"
             tools:layout_editor_absoluteX="126dp"
             tools:layout_editor_absoluteY="290dp" />
 
@@ -239,9 +241,10 @@
             android:id="@+id/pie3_text_con"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="8dp"
-            android:text="TextView"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="10"
+            android:textColor="@color/white"
             tools:layout_editor_absoluteX="209dp"
             tools:layout_editor_absoluteY="290dp" />
 
@@ -249,9 +252,10 @@
             android:id="@+id/pie4_text_con"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:text="TextView"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="10"
+            android:textColor="@color/white"
             tools:layout_editor_absoluteX="284dp"
             tools:layout_editor_absoluteY="290dp" />
 
@@ -273,6 +277,11 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:donut_finished_color="@color/finished_pie_color"
+            app:donut_unfinished_color="@color/unfinished_pie_color"
+            app:donut_unfinished_stroke_width="5dp"
+            app:donut_finished_stroke_width="5dp"
             app:donut_inner_drawable="@drawable/small_animal"
             app:donut_text=""
             app:layout_constraintLeft_toLeftOf="parent"
@@ -284,6 +293,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             app:donut_inner_drawable="@drawable/small_environment"
             app:donut_text=""
             app:layout_constraintLeft_toRightOf="@+id/donut_animal__con"
@@ -294,6 +304,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             app:donut_inner_drawable="@drawable/small_peace"
             app:donut_text=""
             app:layout_constraintLeft_toRightOf="@+id/donut_environment_con"
@@ -304,12 +315,12 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             app:donut_inner_drawable="@drawable/small_sustainable"
             app:donut_text=""
             app:layout_constraintLeft_toRightOf="@+id/donut_peace_con"
             tools:layout_editor_absoluteY="220dp" />
 
     </LinearLayout>
-
 
 </android.support.constraint.ConstraintLayout>

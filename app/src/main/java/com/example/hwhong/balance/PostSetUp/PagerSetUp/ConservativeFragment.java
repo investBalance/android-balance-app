@@ -134,19 +134,40 @@ public class ConservativeFragment extends Fragment {
         bar1_text.setTypeface(dinot); bar2_text.setTypeface(dinot);
         bar1_value.setTypeface(dinot); bar2_value.setTypeface(dinot);
 
+        donutSetUp();
+
         return view;
     }
 
+    private void donutSetUp() {
+        Random random = new Random();
+        int i1 = random.nextInt(101);
+        donut_animal.setProgress((float)i1);
+        pie1_text_con.setText(i1 + "%");
+
+        int i2 = random.nextInt(101);
+        donut_environment.setProgress((float)i2);
+        pie2_text_con.setText(i2 + "%");
+
+        int i3 = random.nextInt(101);
+        donut_peace.setProgress((float)i3);
+        pie3_text_con.setText(i3 + "%");
+
+        int i4 = random.nextInt(101);
+        donut_sustainable.setProgress((float)i4);
+        pie4_text_con.setText(i4 + "%");
+    }
+
     @OnClick(R.id.one_con)
-    public void randomize1() {adapter.randomize(); randomizeTexts();}
+    public void randomize1() {adapter.randomize(); randomizeTexts(); donutSetUp();}
     @OnClick(R.id.two_con)
-    public void randomize2() {adapter.randomize(); randomizeTexts();}
+    public void randomize2() {adapter.randomize(); randomizeTexts(); donutSetUp();}
     @OnClick(R.id.three_con)
-    public void randomize3() {adapter.randomize(); randomizeTexts();}
+    public void randomize3() {adapter.randomize(); randomizeTexts(); donutSetUp();}
     @OnClick(R.id.four_con)
-    public void randomize4() {adapter.randomize(); randomizeTexts();}
+    public void randomize4() {adapter.randomize(); randomizeTexts(); donutSetUp();}
     @OnClick(R.id.five_con)
-    public void randomize5() {adapter.randomize(); randomizeTexts();}
+    public void randomize5() {adapter.randomize(); randomizeTexts(); donutSetUp();}
 
     private void randomizeTexts() {
         Random random = new Random();
