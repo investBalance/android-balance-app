@@ -24,5 +24,5 @@
     <color name="spark_view_color">#46C2AC</color>
 
     <color name="finished_pie_color">#00FF00</color>
-    <color name="unfinished_pie_color">#E0E0E0</color>
+    <color name="unfinished_pie_color">#B0BEC5</color>
 </resources>
