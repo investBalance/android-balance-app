@@ -20,4 +20,6 @@
 
     <color name="start_aggressive_background">#B74E5F</color>
     <color name="end_aggressive_background">#4F2FAC</color>
+
+    <color name="spark_view_color">#46C2AC</color>
 </resources>
