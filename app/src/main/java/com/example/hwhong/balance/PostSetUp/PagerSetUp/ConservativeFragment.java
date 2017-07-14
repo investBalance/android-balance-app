@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -56,6 +57,7 @@ public class ConservativeFragment extends Fragment {
     @BindView(R.id.five_con)                    RadioButton five;
 
     @BindView(R.id.seg_con)                     SegmentedGroup segmentedGroup;
+    @BindView(R.id.progressBar)                 ProgressBar bar;
 
     public ConservativeFragment() {
         // Required empty public constructor
@@ -94,7 +96,9 @@ public class ConservativeFragment extends Fragment {
         sparkView.setAdapter(adapter);
 
         //segmentedGroup.setTintColor(getResources().getColor(R.color.yellow), getResources().getColor(R.color.white));
-
+        bar.setMax(100);
+        bar.setVisibility(View.VISIBLE);
+        bar.setProgress(35);
 
         return view;
     }
