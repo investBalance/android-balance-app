@@ -51,3 +51,6 @@ The following **additional** features are implemented:
   
 - segmented radio buttons           **_kaopiz_**
   https://github.com/Kaopiz/android-segmented-control
+  
+- pie charts                        **_lzyzsd_**
+  https://github.com/lzyzsd/CircleProgress
