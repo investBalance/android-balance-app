@@ -41,3 +41,4 @@ The following **additional** features are implemented:
 - Butterknife from Jake Wharton
 - Phone number input from hbb20
 - drag and drop list view from paul burke
+- spark from Robinhood for graphical stock views
