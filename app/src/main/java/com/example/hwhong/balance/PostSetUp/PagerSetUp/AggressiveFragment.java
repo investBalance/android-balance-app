@@ -1,6 +1,7 @@
 package com.example.hwhong.balance.PostSetUp.PagerSetUp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -16,6 +17,7 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.example.hwhong.balance.PostSetUp.CreditCardActivity;
 import com.example.hwhong.balance.PostSetUp.PortfolioUIComponents.RandomizedAdapter;
 import com.example.hwhong.balance.R;
 import com.github.lzyzsd.circleprogress.DonutProgress;
@@ -135,6 +137,12 @@ public class AggressiveFragment extends Fragment {
         donutSetUp();
 
         return view;
+    }
+
+    @OnClick(R.id.aggressive_continue)
+    public void continueFromAggressive() {
+        Intent intent = new Intent(getActivity(), CreditCardActivity.class);
+        startActivity(intent);
     }
 
     private void donutSetUp() {

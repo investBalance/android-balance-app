@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         //Intent intent = new Intent(getApplicationContext(), EmailActivity.class);
         //startActivity(intent);
 
-        Intent intent = new Intent(getApplicationContext(), PagerActivity.class);
-        startActivity(intent);
+        //Intent intent = new Intent(getApplicationContext(), PagerActivity.class);
+        //startActivity(intent);
     }
 }

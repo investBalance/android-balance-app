@@ -1,5 +1,6 @@
 package com.example.hwhong.balance.PostSetUp;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
@@ -13,6 +14,7 @@ import com.example.hwhong.balance.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class ValuesActivity extends AppCompatActivity{
 
@@ -45,5 +47,11 @@ public class ValuesActivity extends AppCompatActivity{
                 .replace(R.id.content, fragment)
                 .addToBackStack(null)
                 .commit();
+    }
+
+    @OnClick(R.id.values_continue)
+    public void continueFromValues(){
+        Intent intent = new Intent(getApplicationContext(), PagerActivity.class);
+        startActivity(intent);
     }
 }

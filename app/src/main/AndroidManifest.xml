@@ -36,7 +36,8 @@
         <activity android:name=".SetupViews.SSNActivity" />
         <activity android:name=".SetupViews.CompletionActivity" />
         <activity android:name=".PostSetUp.ValuesActivity" />
-        <activity android:name=".PostSetUp.PagerActivity"></activity>
+        <activity android:name=".PostSetUp.PagerActivity" />
+        <activity android:name=".PostSetUp.CreditCardActivity"></activity>
     </application>
 
 </manifest>
