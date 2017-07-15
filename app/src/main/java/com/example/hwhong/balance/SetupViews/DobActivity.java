@@ -46,6 +46,7 @@ public class DobActivity extends AppCompatActivity {
         dob_input.setHintTextColor(getResources().getColor(R.color.white));
     }
 
+    // Register Button click event
     @OnClick(R.id.dob_continue)
     public void continueFromDob(){
         Intent intent = new Intent(getApplicationContext(), AddressActivity.class);
