@@ -67,10 +67,10 @@ public class ConservativeFragment extends Fragment {
     @BindView(R.id.bar1_conservative)           ProgressBar bar1;
     @BindView(R.id.bar2_conservative)           ProgressBar bar2;
 
-    @BindView(R.id.bar1_text)                   TextView bar1_text;
-    @BindView(R.id.bar2_text)                   TextView bar2_text;
-    @BindView(R.id.bar1_value)                  TextView bar1_value;
-    @BindView(R.id.bar2_value)                  TextView bar2_value;
+    @BindView(R.id.bar1_text_conservative)      TextView bar1_text;
+    @BindView(R.id.bar2_text_conservative)      TextView bar2_text;
+    @BindView(R.id.bar1_value_conservative)     TextView bar1_value;
+    @BindView(R.id.bar2_value_conservative)     TextView bar2_value;
 
     @BindView(R.id.pie1_text_con)               TextView pie1_text_con;
     @BindView(R.id.pie2_text_con)               TextView pie2_text_con;
