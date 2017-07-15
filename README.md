@@ -19,7 +19,7 @@ The following **required** functionality is completed:
   - [x] Social Security Screen
   - [x] Completion Screen
 - [x] Choosing of personal values
-- [ ] Choosing of Stock behaviour (Conservative, Moderate, Aggressive)
+- [x] Choosing of Stock behaviour (Conservative, Moderate, Aggressive)
 - [ ] Linking different bank accounts [Grid View or List View]
 - [ ] Main stock View page
    - [ ] Navigation Drawer
