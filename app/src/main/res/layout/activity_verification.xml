@@ -61,7 +61,7 @@
             android:layout_below="@+id/verification_detail"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
-            android:text="@string/veri_more_info"
+            android:text="@string/superhero_more_info"
             android:textColor="@color/yellow"
             android:textSize="10dp"
             android:textStyle="bold" />
@@ -80,15 +80,13 @@
             android:id="@+id/lock_text"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/verification_continue"
-            android:layout_alignEnd="@+id/more_info"
-            android:layout_alignRight="@+id/more_info"
             android:layout_marginBottom="25dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginRight="12dp"
             android:text="@string/lock_text"
             android:textColor="@color/white"
-            android:textSize="9sp" />
+            android:textSize="9sp"
+            android:layout_above="@+id/verification_continue"
+            android:layout_alignLeft="@+id/imageView3"
+            android:layout_alignStart="@+id/imageView3" />
 
         <ImageView
             android:id="@+id/hero"
