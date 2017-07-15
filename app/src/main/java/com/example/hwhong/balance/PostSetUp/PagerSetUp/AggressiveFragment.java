@@ -146,6 +146,7 @@ public class AggressiveFragment extends Fragment {
     }
 
     private void donutSetUp() {
+        Typeface dinot = Typeface.createFromAsset(getActivity().getAssets(), "fonts/DINOT-Regular.ttf");
         Random random = new Random();
         int i1 = random.nextInt(101);
         donut_animal.setProgress((float)i1);
@@ -162,6 +163,11 @@ public class AggressiveFragment extends Fragment {
         int i4 = random.nextInt(101);
         donut_sustainable.setProgress((float)i4);
         pie4_text_agg.setText(i4 + "%");
+
+        pie1_text_agg.setTypeface(dinot);
+        pie2_text_agg.setTypeface(dinot);
+        pie3_text_agg.setTypeface(dinot);
+        pie4_text_agg.setTypeface(dinot);
     }
 
     @OnClick(R.id.one_agg)
