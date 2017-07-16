@@ -37,22 +37,23 @@ The following **additional** features are implemented:
 - draggable list view alternatives? currently unable to collapse the list items. Will look into it.
 
 ## Libraries Used
-- Butterknife from                  **_Jake Wharton_**
+- Butterknife from                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_Jake Wharton_**
   http://jakewharton.github.io/butterknife/
   
-- Phone number input                **_hbb20_**
+- Phone number input                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_hbb20_**
   https://github.com/hbb20/CountryCodePickerProject
   
-- drag and drop list view           **_paul burke_**
+- drag and drop list view           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_paul burke_**
   https://github.com/iPaulPro/Android-ItemTouchHelper-Demo
   
-- Graphical stock views             **_Robinhood_**
+- Graphical stock views             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_Robinhood_**
   https://github.com/robinhood/spark
   
-- segmented radio buttons           **_kaopiz_**
+- segmented radio buttons           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_kaopiz_**
   https://github.com/Kaopiz/android-segmented-control
   
-- pie charts                        **_lzyzsd_**
+- pie charts                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_lzyzsd_**
   https://github.com/lzyzsd/CircleProgress
-- Picasso image caching             **_Square_**
+  
+- Picasso image caching             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_Square_**
   http://square.github.io/picasso/
