@@ -40,7 +40,7 @@ The following **additional** features are implemented:
 - Butterknife from                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_Jake Wharton_**
   http://jakewharton.github.io/butterknife/
   
-- Phone number input                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_hbb20_**
+- Phone number input                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_hbb20_**
   https://github.com/hbb20/CountryCodePickerProject
   
 - drag and drop list view           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_paul burke_**
@@ -52,7 +52,7 @@ The following **additional** features are implemented:
 - segmented radio buttons           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_kaopiz_**
   https://github.com/Kaopiz/android-segmented-control
   
-- pie charts                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_lzyzsd_**
+- pie charts                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_lzyzsd_**
   https://github.com/lzyzsd/CircleProgress
   
 - Picasso image caching             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_Square_**
