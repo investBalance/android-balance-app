@@ -9,8 +9,9 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/imageView"
-        android:background="@drawable/blur_background"/>
+        android:id="@+id/verification_background"
+        android:scaleType="fitXY"
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -80,13 +81,13 @@
             android:id="@+id/lock_text"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="27dp"
             android:text="@string/lock_text"
             android:textColor="@color/white"
             android:textSize="9sp"
             android:layout_above="@+id/verification_continue"
-            android:layout_alignLeft="@+id/imageView3"
-            android:layout_alignStart="@+id/imageView3" />
+            android:layout_alignLeft="@+id/verification_imgv"
+            android:layout_alignStart="@+id/verification_imgv" />
 
         <ImageView
             android:id="@+id/hero"
@@ -101,10 +102,9 @@
             app:srcCompat="@drawable/hero" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/verification_imgv"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            app:srcCompat="@drawable/privacy"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
 

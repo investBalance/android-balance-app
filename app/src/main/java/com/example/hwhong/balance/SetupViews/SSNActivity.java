@@ -9,10 +9,12 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,6 +25,7 @@ public class SSNActivity extends AppCompatActivity {
     @BindView(R.id.ssn_detail) TextView detail;
     @BindView(R.id.ssn_tv)     TextView textView;
     @BindView(R.id.ssn_et)     EditText ssn_input;
+    @BindView(R.id.ssn_background) ImageView wallpaper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class SSNActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ssn);
 
         ButterKnife.bind(this);
+        Picasso.with(getApplicationContext()).load(R.drawable.blur_background).into(wallpaper);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 

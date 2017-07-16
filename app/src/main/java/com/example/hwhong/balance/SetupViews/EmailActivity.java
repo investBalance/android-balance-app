@@ -9,10 +9,12 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,9 +22,11 @@ import butterknife.OnClick;
 
 public class EmailActivity extends AppCompatActivity {
 
-    @BindView(R.id.started_tv)     TextView started;
-    @BindView(R.id.question_email) TextView question_email;
-    @BindView(R.id.email_editText) EditText email_editText;
+    @BindView(R.id.started_tv)       TextView started;
+    @BindView(R.id.question_email)   TextView question_email;
+    @BindView(R.id.email_editText)   EditText email_editText;
+
+    @BindView(R.id.email_background) ImageView wallpaper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,8 @@ public class EmailActivity extends AppCompatActivity {
                 //WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_email);
         ButterKnife.bind(this);
+
+        Picasso.with(getApplicationContext()).load(R.drawable.blur_background).into(wallpaper);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();

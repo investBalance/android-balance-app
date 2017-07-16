@@ -6,9 +6,11 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hwhong.balance.R;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,6 +20,7 @@ public class CitizenshipActivity extends AppCompatActivity {
 
     @BindView(R.id.citizenship_detail) TextView detail;
     @BindView(R.id.citizenship_tv)     TextView main_text;
+    @BindView(R.id.citizen_background) ImageView wallpaper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,7 @@ public class CitizenshipActivity extends AppCompatActivity {
         setContentView(R.layout.activity_citizenship);
 
         ButterKnife.bind(this);
+        Picasso.with(getApplicationContext()).load(R.drawable.blur_background).into(wallpaper);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 

@@ -9,10 +9,12 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,6 +25,7 @@ public class NameActivity extends AppCompatActivity {
     @BindView(R.id.firstname_et) EditText firstname;
     @BindView(R.id.lastname_et)  EditText lastname;
     @BindView(R.id.name_tv)      TextView name;
+    @BindView(R.id.name_background) ImageView wallpaper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,8 @@ public class NameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_name);
 
         ButterKnife.bind(this);
+        Picasso.with(getApplicationContext()).load(R.drawable.blur_background).into(wallpaper);
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 

@@ -6,10 +6,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hwhong.balance.PostSetUp.ValuesActivity;
 import com.example.hwhong.balance.R;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,6 +22,8 @@ public class CompletionActivity extends AppCompatActivity {
     @BindView(R.id.complete_tv)     TextView main;
     @BindView(R.id.complete_detail) TextView detail;
     @BindView(R.id.hero_text)       TextView hero_text;
+    @BindView(R.id.completion_background)
+    ImageView wallpaper;
 
 
     @Override
@@ -33,6 +37,7 @@ public class CompletionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_completion);
 
         ButterKnife.bind(this);
+        Picasso.with(getApplicationContext()).load(R.drawable.blur_background).into(wallpaper);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 

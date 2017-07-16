@@ -10,10 +10,12 @@ import android.text.TextUtils;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -26,6 +28,8 @@ public class ProfileActivity extends AppCompatActivity {
     @BindView(R.id.password_et)      EditText passowrd;
     @BindView(R.id.profile_continue) Button profileContinue;
 
+    @BindView(R.id.profile_background) ImageView wallpaper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +40,8 @@ public class ProfileActivity extends AppCompatActivity {
                 //WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_profile);
         ButterKnife.bind(this);
+
+        Picasso.with(getApplicationContext()).load(R.drawable.blur_background).into(wallpaper);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();

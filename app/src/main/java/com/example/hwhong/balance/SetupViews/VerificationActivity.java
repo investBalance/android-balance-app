@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,7 +24,9 @@ public class VerificationActivity extends AppCompatActivity {
     @BindView(R.id.more_info)           TextView info_text;
     @BindView(R.id.lock_text)           TextView lock_text;
 
-    @BindView(R.id.hero)                ImageView hero;
+    @BindView(R.id.hero)                    ImageView hero;
+    @BindView(R.id.verification_background) ImageView wallpaper;
+    @BindView(R.id.verification_imgv)       ImageView main_pic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,9 @@ public class VerificationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_verification);
 
         ButterKnife.bind(this);
+
+        Picasso.with(getApplicationContext()).load(R.drawable.blur_background).into(wallpaper);
+        Picasso.with(getApplicationContext()).load(R.drawable.privacy).into(main_pic);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 

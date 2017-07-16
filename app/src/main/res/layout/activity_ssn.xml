@@ -9,8 +9,8 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/imageView"
-        android:background="@drawable/blur_background"/>
+        android:id="@+id/ssn_background"
+        android:scaleType="fitXY"/>
 
     <RelativeLayout
         android:layout_width="match_parent"

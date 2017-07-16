@@ -9,10 +9,12 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,9 +22,10 @@ import butterknife.OnClick;
 
 public class AddressActivity extends AppCompatActivity {
 
-    @BindView(R.id.address_detail) TextView address_detail;
-    @BindView(R.id.address_tv) TextView address_tv;
-    @BindView(R.id.address_et) EditText address_et;
+    @BindView(R.id.address_detail)    TextView address_detail;
+    @BindView(R.id.address_tv)        TextView address_tv;
+    @BindView(R.id.address_et)        EditText address_et;
+    @BindView(R.id.address_wallpaper) ImageView wallpaper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +36,9 @@ public class AddressActivity extends AppCompatActivity {
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
         //WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_address);
-
         ButterKnife.bind(this);
+
+        Picasso.with(getApplicationContext()).load(R.drawable.blur_background).into(wallpaper);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 

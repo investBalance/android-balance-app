@@ -9,11 +9,13 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
 import com.hbb20.CountryCodePicker;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,9 +23,10 @@ import butterknife.OnClick;
 
 public class PhoneActivity extends AppCompatActivity {
 
-    @BindView(R.id.ccp) CountryCodePicker ccp;
-    @BindView(R.id.phone_tv) TextView phone;
-    @BindView(R.id.phone_et) EditText phone_number;
+    @BindView(R.id.ccp)              CountryCodePicker ccp;
+    @BindView(R.id.phone_tv)         TextView phone;
+    @BindView(R.id.phone_et)         EditText phone_number;
+    @BindView(R.id.phone_background) ImageView wallpaper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,8 @@ public class PhoneActivity extends AppCompatActivity {
         //WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_phone);
         ButterKnife.bind(this);
+
+        Picasso.with(getApplicationContext()).load(R.drawable.blur_background).into(wallpaper);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();

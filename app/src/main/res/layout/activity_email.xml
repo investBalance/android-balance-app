@@ -7,10 +7,10 @@
     tools:context="com.example.hwhong.balance.SetupViews.EmailActivity">
 
     <ImageView
+        android:id="@+id/email_background"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/imageView"
-        android:background="@drawable/blur_background"/>
+        android:scaleType="fitXY" />
 
     <RelativeLayout
         android:layout_width="match_parent"

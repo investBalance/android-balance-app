@@ -5,9 +5,11 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hwhong.balance.R;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,6 +20,7 @@ public class CreditCardActivity extends AppCompatActivity {
     @BindView(R.id.creditcard_detail)   TextView detail;
     @BindView(R.id.more_info_cdc)       TextView cdc_more_info;
     @BindView(R.id.lock_text)           TextView lock_text;
+    @BindView(R.id.cdc_background)      ImageView wallpaper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,7 @@ public class CreditCardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_credit_card);
 
         ButterKnife.bind(this);
+        Picasso.with(getApplicationContext()).load(R.drawable.blur_background).into(wallpaper);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
