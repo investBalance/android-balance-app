@@ -107,7 +107,7 @@
             android:layout_alignStart="@+id/cdc_main_img"
             android:text="@string/lock_text"
             android:textColor="@color/white"
-            android:textSize="12sp"
+            android:textSize="10sp"
             android:gravity="center"
             android:layout_marginBottom="25dp"
             app:layout_constraintBottom_toTopOf="@+id/creditcard_continue"
