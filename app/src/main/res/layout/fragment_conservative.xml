@@ -335,4 +335,14 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/hero_conservative"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/hero"
+        android:layout_marginRight="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp" />
+
 </android.support.constraint.ConstraintLayout>
