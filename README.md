@@ -54,3 +54,5 @@ The following **additional** features are implemented:
   
 - pie charts                        **_lzyzsd_**
   https://github.com/lzyzsd/CircleProgress
+- Picasso image caching             **_Square_**
+  http://square.github.io/picasso/
