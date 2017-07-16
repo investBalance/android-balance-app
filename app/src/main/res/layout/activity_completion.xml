@@ -73,7 +73,6 @@
             android:id="@+id/star_completion"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            app:srcCompat="@drawable/star"
             android:layout_below="@+id/hero_text"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="28dp" />

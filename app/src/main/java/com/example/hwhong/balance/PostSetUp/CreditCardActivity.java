@@ -21,6 +21,7 @@ public class CreditCardActivity extends AppCompatActivity {
     @BindView(R.id.more_info_cdc)       TextView cdc_more_info;
     @BindView(R.id.lock_text)           TextView lock_text;
     @BindView(R.id.cdc_background)      ImageView wallpaper;
+    @BindView(R.id.cdc_main_img)        ImageView main_img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class CreditCardActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         Picasso.with(getApplicationContext()).load(R.drawable.blur_background).into(wallpaper);
+        Picasso.with(getApplicationContext()).load(R.drawable.cdc).into(main_img);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 

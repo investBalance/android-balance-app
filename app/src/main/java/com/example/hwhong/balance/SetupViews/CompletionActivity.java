@@ -22,9 +22,8 @@ public class CompletionActivity extends AppCompatActivity {
     @BindView(R.id.complete_tv)     TextView main;
     @BindView(R.id.complete_detail) TextView detail;
     @BindView(R.id.hero_text)       TextView hero_text;
-    @BindView(R.id.completion_background)
-    ImageView wallpaper;
-
+    @BindView(R.id.completion_background) ImageView wallpaper;
+    @BindView(R.id.star_completion) ImageView main_img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +37,8 @@ public class CompletionActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         Picasso.with(getApplicationContext()).load(R.drawable.blur_background).into(wallpaper);
+        Picasso.with(getApplicationContext()).load(R.drawable.star).into(main_img);
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
