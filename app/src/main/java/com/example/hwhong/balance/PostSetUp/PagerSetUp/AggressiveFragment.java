@@ -18,6 +18,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.example.hwhong.balance.PostSetUp.CreditCardActivity;
+import com.example.hwhong.balance.PostSetUp.HeroPage;
 import com.example.hwhong.balance.PostSetUp.PortfolioUIComponents.RandomizedAdapter;
 import com.example.hwhong.balance.R;
 import com.github.lzyzsd.circleprogress.DonutProgress;
@@ -196,11 +197,11 @@ public class AggressiveFragment extends Fragment {
         bar2_value.setText("$"+projected);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
+    @OnClick(R.id.hero_aggressive)
+    public void heroPullUp() {
+        Intent intent = new Intent(getActivity(), HeroPage.class);
+        startActivity(intent);
+        getActivity().overridePendingTransition( R.anim.slide_in_up, R.anim.stay );
     }
 
     public interface OnFragmentInteractionListener {
