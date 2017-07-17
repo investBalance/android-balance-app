@@ -12,6 +12,7 @@ import com.example.hwhong.balance.PostSetUp.CreditCardActivity;
 import com.example.hwhong.balance.PostSetUp.PagerActivity;
 import com.example.hwhong.balance.PostSetUp.ValuesActivity;
 import com.example.hwhong.balance.SetupViews.EmailActivity;
+import com.example.hwhong.balance.SetupViews.VerificationActivity;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         //Intent intent = new Intent(getApplicationContext(), CreditCardActivity.class);
         //startActivity(intent);
 
-        Intent intent = new Intent(getApplicationContext(), PagerActivity.class);
+        Intent intent = new Intent(getApplicationContext(), VerificationActivity.class);
         startActivity(intent);
     }
 }

@@ -39,7 +39,11 @@
         <activity android:name=".PostSetUp.ValuesActivity" />
         <activity android:name=".PostSetUp.PagerActivity" />
         <activity android:name=".PostSetUp.CreditCardActivity" />
-        <activity android:name=".PostSetUp.HeroPage" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"></activity>
+        <activity
+            android:name=".PostSetUp.HeroPage"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity android:name=".SetupViews.HeroVerify"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"></activity>
     </application>
 
 </manifest>

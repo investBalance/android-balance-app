@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.hwhong.balance.PostSetUp.HeroPage;
 import com.example.hwhong.balance.R;
 import com.squareup.picasso.Picasso;
 
@@ -62,6 +63,8 @@ public class VerificationActivity extends AppCompatActivity {
 
     @OnClick(R.id.hero)
     public void moreInformationHero() {
-        Toast.makeText(this, "This is work in Progress", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), HeroVerify.class);
+        startActivity(intent);
+        overridePendingTransition( R.anim.slide_in_up, R.anim.stay );
     }
 }

@@ -48,4 +48,9 @@
         Conservative styles will typically have lower earnings but more stability.
         Aggressive styles tend to have higher earnings but are less stable.
         Remember, with great power comes great responsibility. Choose wisely.</string>
+
+    <string name="hero_intro">G\'DAY I\'M YOUR HELP HERO</string>
+    <string name="hero_detail">Find me in the top right corner of your Balance app,
+        I\'ll be the handsome looking chap waiting to provide you with tips, secrets and explanations
+        that will help you become a Balance rockstar in no time.</string>
 </resources>
