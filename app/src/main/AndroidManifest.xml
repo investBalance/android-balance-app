@@ -15,10 +15,10 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:largeHeap="true">
+        android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,7 +38,8 @@
         <activity android:name=".SetupViews.CompletionActivity" />
         <activity android:name=".PostSetUp.ValuesActivity" />
         <activity android:name=".PostSetUp.PagerActivity" />
-        <activity android:name=".PostSetUp.CreditCardActivity"></activity>
+        <activity android:name=".PostSetUp.CreditCardActivity" />
+        <activity android:name=".PostSetUp.HeroPage" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"></activity>
     </application>
 
 </manifest>

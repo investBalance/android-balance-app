@@ -13,11 +13,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.example.hwhong.balance.PostSetUp.CreditCardActivity;
+import com.example.hwhong.balance.PostSetUp.HeroPage;
 import com.example.hwhong.balance.PostSetUp.PortfolioUIComponents.RandomizedAdapter;
 import com.example.hwhong.balance.R;
 import com.github.lzyzsd.circleprogress.DonutProgress;
@@ -83,6 +85,8 @@ public class ConservativeFragment extends Fragment {
     @BindView(R.id.donut_environment_con)       DonutProgress donut_environment;
     @BindView(R.id.donut_sustainable_con)       DonutProgress donut_sustainable;
     @BindView(R.id.donut_peace_con)             DonutProgress donut_peace;
+
+    @BindView(R.id.hero_conservative)           ImageView hero;
 
 
     public ConservativeFragment() {
@@ -197,6 +201,14 @@ public class ConservativeFragment extends Fragment {
         bar2.setProgress(projected/10);
         bar2_value.setText("$"+projected);
     }
+
+    @OnClick(R.id.hero_conservative)
+    public void heroPullUp() {
+        Intent intent = new Intent(getActivity(), HeroPage.class);
+        startActivity(intent);
+        getActivity().overridePendingTransition( R.anim.slide_in_up, R.anim.stay );
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated

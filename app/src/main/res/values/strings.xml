@@ -42,4 +42,10 @@
     <string name="cdc_statement">Link a card</string>
     <string name="cdc_detail_statement">Connect your bank account so we can auto-round up
     your purchases.</string>
+
+    <string name="choose_style">CHOOSE YOUR INVESTMENT STYLE</string>
+    <string name="hero_page_explain">Select what type of investments fit your goals.
+        Conservative styles will typically have lower earnings but more stability.
+        Aggressive styles tend to have higher earnings but are less stable.
+        Remember, with great power comes great responsibility. Choose wisely.</string>
 </resources>

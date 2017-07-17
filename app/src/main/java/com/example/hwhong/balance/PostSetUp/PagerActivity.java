@@ -22,7 +22,5 @@ public class PagerActivity extends FragmentActivity {
 
         PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());
         vPager.setAdapter(adapter);
-
-
     }
 }

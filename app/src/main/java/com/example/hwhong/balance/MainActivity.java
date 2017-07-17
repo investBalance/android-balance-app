@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         //Intent intent = new Intent(getApplicationContext(), CreditCardActivity.class);
         //startActivity(intent);
 
-        //Intent intent = new Intent(getApplicationContext(), PagerActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), PagerActivity.class);
+        startActivity(intent);
     }
 }
