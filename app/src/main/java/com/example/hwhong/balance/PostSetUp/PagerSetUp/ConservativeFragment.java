@@ -88,7 +88,6 @@ public class ConservativeFragment extends Fragment {
 
     @BindView(R.id.hero_conservative)           ImageView hero;
 
-
     public ConservativeFragment() {
         // Required empty public constructor
     }

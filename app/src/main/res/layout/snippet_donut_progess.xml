@@ -1,0 +1,192 @@
+<merge
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/donutProgress_animal"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            app:donut_finished_color="@color/finished_pie_color"
+            app:donut_unfinished_color="@color/unfinished_pie_color"
+            app:donut_unfinished_stroke_width="5dp"
+            app:donut_finished_stroke_width="5dp"
+            app:donut_inner_drawable="@drawable/small_animal"
+            app:donut_text=""/>
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintLeft_toRightOf="@+id/donutProgress_animal"
+            android:layout_marginLeft="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:id="@+id/donut_progress_envivornment"
+            app:donut_finished_color="@color/finished_pie_color"
+            app:donut_unfinished_color="@color/unfinished_pie_color"
+            app:donut_unfinished_stroke_width="5dp"
+            app:donut_finished_stroke_width="5dp"
+            app:donut_inner_drawable="@drawable/small_environment"
+            app:donut_text=""/>
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintRight_toLeftOf="@+id/donut_progess_sustainability"
+            android:layout_marginRight="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:id="@+id/donut_progess_peace"
+            app:donut_finished_color="@color/finished_pie_color"
+            app:donut_unfinished_color="@color/unfinished_pie_color"
+            app:donut_unfinished_stroke_width="5dp"
+            app:donut_finished_stroke_width="5dp"
+            app:donut_inner_drawable="@drawable/small_peace"
+            app:donut_text=""/>
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="12dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/donut_progess_sustainability"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            app:donut_finished_color="@color/finished_pie_color"
+            app:donut_unfinished_color="@color/unfinished_pie_color"
+            app:donut_unfinished_stroke_width="5dp"
+            app:donut_finished_stroke_width="5dp"
+            app:donut_inner_drawable="@drawable/small_sustainable"
+            app:donut_text=""/>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="0dp"
+            android:text="Animal Rights"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/donutProgress_animal" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="0dp"
+            android:text="Environment"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/donut_progress_envivornment" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="0dp"
+            android:text="Promoting Peace"
+            android:textAlignment="center"
+            android:textSize="9sp"
+            android:textColor="@color/white"
+            app:layout_constraintRight_toLeftOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/donut_progess_peace" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="0dp"
+            android:text="Sustainability"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/donut_progess_sustainability" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/donut_progress_envivornment"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintRight_toLeftOf="@+id/donut_progess_peace"
+            android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"
+            app:layout_constraintVertical_bias="0.484" />
+
+        <TextView
+            android:id="@+id/animal_value"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="0dp"
+            android:text="TextView"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/environment_value"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="0dp"
+            android:text="TextView"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@+id/animal_value"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/sustainable_value"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="0dp"
+            android:text="TextView"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/peace_value"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="0dp"
+            android:text="TextView"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            app:layout_constraintRight_toLeftOf="@+id/sustainable_value"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</merge>
