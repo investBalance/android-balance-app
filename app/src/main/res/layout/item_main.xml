@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/item"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="60dp"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?selectableItemBackground">
@@ -34,7 +34,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:scaleType="center"
-        android:src="@drawable/ic_reorder_grey_500_24dp"
+        android:src="@drawable/ic_reorder_bars"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -47,7 +47,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/animal"
+        android:src="@drawable/ic_animal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

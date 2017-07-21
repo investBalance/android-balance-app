@@ -37,8 +37,12 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
 
     public RecyclerListAdapter(Context context, OnStartDragListener dragStartListener) {
         mDragStartListener = dragStartListener;
-        int[] arr = new int[] {R.drawable.animal, R.drawable.diversity, R.drawable.environment,
-                R.drawable.hrights, R.drawable.peace, R.drawable.sustainable};
+        int[] arr = new int[] {R.drawable.ic_animal,
+                               R.drawable.ic_diversity,
+                               R.drawable.ic_environment,
+                               R.drawable.ic_human_rights,
+                               R.drawable.ic_peace,
+                               R.drawable.ic_sustainable};
         String[] str = new String[] {"Animal Rights",
                                      "Diversity",
                                      "Environment",

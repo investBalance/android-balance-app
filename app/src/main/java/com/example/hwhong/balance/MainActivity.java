@@ -40,12 +40,11 @@ public class MainActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-
     }
 
     @OnClick(R.id.createAccountBut)
     public void createAccount() {
-        Intent intent = new Intent(getApplicationContext(), EmailActivity.class);
+        Intent intent = new Intent(getApplicationContext(), ValuesActivity.class);
         startActivity(intent);
 
         //Intent intent = new Intent(getApplicationContext(), VerificationActivity.class);

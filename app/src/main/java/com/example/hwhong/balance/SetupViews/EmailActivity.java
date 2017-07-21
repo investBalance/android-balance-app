@@ -25,7 +25,6 @@ public class EmailActivity extends AppCompatActivity {
     @BindView(R.id.started_tv)       TextView started;
     @BindView(R.id.question_email)   TextView question_email;
     @BindView(R.id.email_editText)   EditText email_editText;
-
     @BindView(R.id.email_background) ImageView wallpaper;
 
     @Override
