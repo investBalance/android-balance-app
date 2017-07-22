@@ -86,11 +86,6 @@ public class NavigationDrawerActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -100,18 +95,18 @@ public class NavigationDrawerActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_values) {
             selectItem(1);
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_investments) {
             selectItem(2);
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_Settings) {
             selectItem(3);
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_share) {
             selectItem(4);
 
-        } else {
+        } else if (id == R.id.nav_help){
             selectItem(0);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

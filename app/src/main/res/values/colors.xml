@@ -27,4 +27,6 @@
     <color name="unfinished_pie_color">#B0BEC5</color>
 
     <color name="navigation_drawer_background">#40000000</color>
+
+    <color name="navigation_drawer_icon">#FFF88A</color>
 </resources>
