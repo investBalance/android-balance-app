@@ -8,6 +8,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.hwhong.balance.MainScreens.NavigationDrawerActivity;
 import com.example.hwhong.balance.PostSetUp.CreditCardActivity;
 import com.example.hwhong.balance.PostSetUp.PagerActivity;
 import com.example.hwhong.balance.PostSetUp.ValuesActivity;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.createAccountBut)
     public void createAccount() {
-        Intent intent = new Intent(getApplicationContext(), EmailActivity.class);
+        Intent intent = new Intent(getApplicationContext(), NavigationDrawerActivity.class);
         startActivity(intent);
 
         //Intent intent = new Intent(getApplicationContext(), VerificationActivity.class);

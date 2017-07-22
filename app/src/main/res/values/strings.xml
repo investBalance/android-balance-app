@@ -53,4 +53,10 @@
     <string name="hero_detail">Find me in the top right corner of your Balance app,
         I\'ll be the handsome looking chap waiting to provide you with tips, secrets and explanations
         that will help you become a Balance rockstar in no time.</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
