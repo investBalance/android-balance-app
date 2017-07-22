@@ -27,11 +27,14 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="ThemeActionBar"
-        parent="Widget.AppCompat.Light.ActionBar.Solid">
-        <item name="android:background">@null</item>
+    <style name="TransparentActionBar"
+        parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@android:color/transparent</item>
+
         <!-- Support library compatibility -->
-        <item name="background">@null</item>
+        <item name="background">@android:color/transparent</item>
+        <item name="elevation">0dp</item>
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
 
