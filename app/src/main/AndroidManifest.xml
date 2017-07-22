@@ -47,7 +47,6 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
         <activity
             android:name=".MainScreens.NavigationDrawerActivity"
-            android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
