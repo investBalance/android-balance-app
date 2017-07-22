@@ -50,16 +50,16 @@ public class NavigationDrawerActivity extends AppCompatActivity
         setContentView(R.layout.activity_navigation_drawer);
         ButterKnife.bind(this);
 
-
+        // Action Customize
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
-
     }
 
     @Override
@@ -95,20 +95,24 @@ public class NavigationDrawerActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_values) {
-            selectItem(1);
-        } else if (id == R.id.nav_investments) {
-            selectItem(2);
-
-        } else if (id == R.id.nav_Settings) {
-            selectItem(3);
-
-        } else if (id == R.id.nav_share) {
-            selectItem(4);
-
-        } else if (id == R.id.nav_help){
-            selectItem(0);
+        switch(id) {
+            case R.id.nav_values:
+                selectItem(0);
+                break;
+            case R.id.nav_investments:
+                selectItem(1);
+                break;
+            case R.id.nav_Settings:
+                selectItem(2);
+                break;
+            case R.id.nav_share:
+                selectItem(3);
+                break;
+            case R.id.nav_help:
+                selectItem(0);
+                break;
         }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
