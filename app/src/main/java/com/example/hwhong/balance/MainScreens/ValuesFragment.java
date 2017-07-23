@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.hwhong.balance.DraggableListView.RecyclerListFragment;
 import com.example.hwhong.balance.PostSetUp.PagerSetUp.AggressiveFragment;
 import com.example.hwhong.balance.R;
 
@@ -47,7 +48,14 @@ public class ValuesFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_values, container, false);
         ButterKnife.bind(this, view);
-        // Inflate the layout for this fragment
+
+        // Replacing fragments within a fragment (woop woop!)
+        Fragment fragment = new RecyclerListFragment();
+        getChildFragmentManager().beginTransaction()
+                .replace(R.id.content_fragment, fragment)
+                .addToBackStack(null)
+                .commit();
+
         return view;
     }
 
