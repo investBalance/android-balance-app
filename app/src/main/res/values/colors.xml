@@ -29,4 +29,7 @@
     <color name="navigation_drawer_background">#40000000</color>
 
     <color name="navigation_drawer_icon">#FFF88A</color>
+
+    <color name="view_investment_background_start">#643DF7</color>
+    <color name="view_investment_background_end">#D544D0</color>
 </resources>

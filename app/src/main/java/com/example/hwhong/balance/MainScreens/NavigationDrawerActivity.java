@@ -127,7 +127,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 fragment = new ValuesFragment();
                 break;
             case 1:
-                fragment = new AggressiveFragment();
+                fragment = new ViewInvestmentFragment();
                 break;
             case 2:
                 fragment = new ConservativeFragment();
