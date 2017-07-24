@@ -3,11 +3,13 @@ package com.example.hwhong.balance.MainScreens;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.View;
@@ -50,21 +52,36 @@ public class NavigationDrawerActivity extends AppCompatActivity
         setContentView(R.layout.activity_navigation_drawer);
         ButterKnife.bind(this);
 
+        initToolbar();
+
+        // Sets the default NavigationDrawerActivity to ViewInvestment
+        selectItem(1);
+    }
+
+    public void initToolbar() {
         // Action Customize
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-               this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
+
+        // Changes the hamburg icon to menu icon
+        toolbar.post(new Runnable() {
+            @Override
+            public void run() {
+                Drawable d = ResourcesCompat.getDrawable(getResources(), R.drawable.ic_menu_man, null);
+                toolbar.setNavigationIcon(d);
+            }
+        });
 
         navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
