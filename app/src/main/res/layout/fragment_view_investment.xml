@@ -1,10 +1,69 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/view_investment_background"
     tools:context="com.example.hwhong.balance.MainScreens.ViewInvestmentFragment">
 
+    <TextView
+        android:id="@+id/view_investment_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+3.5% (bonds)"
+        android:textSize="15sp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/yellow"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintHorizontal_bias="0.501" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout3"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:textColor="@color/white"
+            android:id="@+id/dollar_sign"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/main_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="944"
+            android:textColor="@color/white"
+            android:textSize="50sp"/>
+
+        <TextView
+            android:id="@+id/dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:textColor="@color/white"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/cents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="49"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
 
 
-</FrameLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.example.hwhong.balance.MainScreens;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.hwhong.balance.PostSetUp.PagerSetUp.AggressiveFragment;
 import com.example.hwhong.balance.PostSetUp.PagerSetUp.ConservativeFragment;
@@ -41,6 +43,17 @@ public class NavigationDrawerActivity extends AppCompatActivity
     @BindView(R.id.nav_view)      NavigationView navigationView;
     @BindView(R.id.toolbar)       Toolbar toolbar;
 
+    // Navigation Drawer view childs
+    /*
+    @BindView(R.id.nav_value_heading)  TextView nav_heading;
+    @BindView(R.id.nav_dollar)         TextView dollar;
+    @BindView(R.id.nav_main_value)     TextView main_value;
+    @BindView(R.id.nav_dot)            TextView dot;
+    @BindView(R.id.nav_cents)          TextView cents;
+    @BindView(R.id.trending_heading)   TextView heading;
+    @BindView(R.id.trending_trending)  TextView trending;
+    */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,11 +66,25 @@ public class NavigationDrawerActivity extends AppCompatActivity
         ButterKnife.bind(this);
 
         initToolbar();
+        //initDrawerViews();
 
         // Sets the default NavigationDrawerActivity to ViewInvestment
         selectItem(1);
     }
 
+    /*
+    public void initDrawerViews() {
+        Typeface dinot = Typeface.createFromAsset(getAssets(), "fonts/DINOT-Regular.ttf");
+
+        //nav_heading.setTypeface(dinot);
+        dollar.setTypeface(dinot);
+        main_value.setTypeface(dinot);
+        dot.setTypeface(dinot);
+        cents.setTypeface(dinot);
+        heading.setTypeface(dinot);
+        trending.setTypeface(dinot);
+    }
+    */
     public void initToolbar() {
         // Action Customize
         setSupportActionBar(toolbar);
@@ -157,12 +184,6 @@ public class NavigationDrawerActivity extends AppCompatActivity
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-
-            //mDrawerList.setItemChecked(position, true);
-            //mDrawerList.setSelection(position);
-            //setTitle(mNavigationDrawerItemTitles[position]);
-            //drawer.closeDrawer(mDrawerList);
-
         } else {
             Log.e("MainActivity", "Error in creating fragment");
         }

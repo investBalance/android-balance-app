@@ -1,13 +1,20 @@
 package com.example.hwhong.balance.MainScreens;
 
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.hwhong.balance.R;
+
+import org.w3c.dom.Text;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +31,12 @@ public class ViewInvestmentFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    // View bindings
+    @BindView(R.id.dollar_sign)             TextView dollar_sign;
+    @BindView(R.id.main_value)              TextView main_value;
+    @BindView(R.id.dot)                     TextView dot;
+    @BindView(R.id.cents)                   TextView cents;
+    @BindView(R.id.view_investment_detail)  TextView detail;
 
     public ViewInvestmentFragment() {
         // Required empty public constructor
@@ -51,8 +64,18 @@ public class ViewInvestmentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_view_investment, container, false);
+        View view = inflater.inflate(R.layout.fragment_view_investment, container, false);
+        ButterKnife.bind(this, view);
+
+        Typeface dinot = Typeface.createFromAsset(getActivity().getAssets(), "fonts/DINOT-Regular.ttf");
+
+        // Setting type face for custom dollar textviews
+        dollar_sign.setTypeface(dinot); dot.setTypeface(dinot);
+        main_value.setTypeface(dinot); cents.setTypeface(dinot);
+        detail.setTypeface(dinot);
+
+
+        return view;
     }
 
 }
