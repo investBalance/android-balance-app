@@ -7,11 +7,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.example.hwhong.balance.R;
 
 import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -38,6 +42,16 @@ public class ViewInvestmentFragment extends Fragment {
     @BindView(R.id.cents)                   TextView cents;
     @BindView(R.id.view_investment_detail)  TextView detail;
     @BindView(R.id.view_investment_explain) TextView explain;
+
+    @BindView(R.id.dollar_seg_but)          RadioButton dollar_button;
+    @BindView(R.id.percentage_seg_but)      RadioButton percentage_button;
+    @BindView(R.id.shares_seg_but)          RadioButton shares_button;
+
+    @BindView(R.id.dummy_listview)          ListView listView;
+
+    // For populating list data
+    private ArrayList<Item> list;
+    private DummyListAdapter adapter;
 
     public ViewInvestmentFragment() {
         // Required empty public constructor
@@ -79,8 +93,24 @@ public class ViewInvestmentFragment extends Fragment {
 
         explain.setTypeface(dinot);
 
+        dollar_button.setTypeface(dinot);
+        percentage_button.setTypeface(dinot);
+        shares_button.setTypeface(dinot);
+
+        setUpDummyData();
+        adapter = new DummyListAdapter(getActivity().getApplicationContext(), list);
+        listView.setAdapter(adapter);
 
         return view;
+    }
+
+    private void setUpDummyData() {
+        list = new ArrayList<>();
+        list.add(new Item("Small Company Stocks", "$287.74"));
+        list.add(new Item("Emerging Market Stocks", "$91.44"));
+        list.add(new Item("Large Company Stocks", "$401.34"));
+        list.add(new Item("Corporate Bonds", "$11.34"));
+        list.add(new Item("Real Estate Stocks", "$49.04"));
     }
 
 }
