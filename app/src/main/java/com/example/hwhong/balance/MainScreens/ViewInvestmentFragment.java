@@ -37,6 +37,7 @@ public class ViewInvestmentFragment extends Fragment {
     @BindView(R.id.dot)                     TextView dot;
     @BindView(R.id.cents)                   TextView cents;
     @BindView(R.id.view_investment_detail)  TextView detail;
+    @BindView(R.id.view_investment_explain) TextView explain;
 
     public ViewInvestmentFragment() {
         // Required empty public constructor
@@ -68,11 +69,15 @@ public class ViewInvestmentFragment extends Fragment {
         ButterKnife.bind(this, view);
 
         Typeface dinot = Typeface.createFromAsset(getActivity().getAssets(), "fonts/DINOT-Regular.ttf");
+        Typeface roboto_light = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Roboto-Light.ttf");
+        Typeface roboto_thin = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Roboto-Thin.ttf");
 
         // Setting type face for custom dollar textviews
         dollar_sign.setTypeface(dinot); dot.setTypeface(dinot);
         main_value.setTypeface(dinot); cents.setTypeface(dinot);
         detail.setTypeface(dinot);
+
+        explain.setTypeface(dinot);
 
 
         return view;
