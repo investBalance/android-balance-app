@@ -106,7 +106,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
         navigationView.setNavigationItemSelectedListener(this);
     }
-
+/*
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -115,7 +115,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-
+*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -186,6 +186,15 @@ public class NavigationDrawerActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else {
             Log.e("MainActivity", "Error in creating fragment");
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() > 0) {
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
         }
     }
 }

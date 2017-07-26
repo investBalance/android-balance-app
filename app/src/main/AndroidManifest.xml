@@ -47,7 +47,8 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
         <activity
             android:name=".MainScreens.NavigationDrawerActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainScreens.SpecficInvestActivity"></activity>
     </application>
 
 </manifest>

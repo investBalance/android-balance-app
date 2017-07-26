@@ -1,16 +1,20 @@
 package com.example.hwhong.balance.MainScreens;
 
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.example.hwhong.balance.PostSetUp.PagerSetUp.ConservativeFragment;
 import com.example.hwhong.balance.R;
 
 import org.w3c.dom.Text;
@@ -100,6 +104,21 @@ public class ViewInvestmentFragment extends Fragment {
         setUpDummyData();
         adapter = new DummyListAdapter(getActivity().getApplicationContext(), list);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                //Intent intent = new Intent(getActivity(), SpecficInvestActivity.class);
+                //startActivity(intent);
+
+
+                // Need to figure a way for the stack popping action
+                // dosent go back to the last fragment
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.content_frame, new ConservativeFragment()).commit();
+            }
+        });
 
         return view;
     }
