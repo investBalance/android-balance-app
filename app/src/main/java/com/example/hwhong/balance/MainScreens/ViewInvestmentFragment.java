@@ -39,6 +39,8 @@ public class ViewInvestmentFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    private String TAG = "VIEW_INVESTMENT_TAG";
+
     // View bindings
     @BindView(R.id.dollar_sign)             TextView dollar_sign;
     @BindView(R.id.main_value)              TextView main_value;
@@ -108,20 +110,27 @@ public class ViewInvestmentFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                //Intent intent = new Intent(getActivity(), SpecficInvestActivity.class);
-                //startActivity(intent);
-
+                //Intent used to be here
 
                 // Need to figure a way for the stack popping action
                 // dosent go back to the last fragment
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.content_frame, new ConservativeFragment()).commit();
+                fragmentManager.
+                        beginTransaction().
+                        setCustomAnimations(
+                                R.anim.enter_from_right,
+                                R.anim.exit_to_left,
+                                R.anim.enter_from_left,
+                                R.anim.exit_to_right).
+                        replace(R.id.content_frame, new ConservativeFragment()).
+                        addToBackStack(TAG).
+                        commit();
             }
         });
 
         return view;
     }
+
 
     private void setUpDummyData() {
         list = new ArrayList<>();

@@ -66,7 +66,6 @@ public class NavigationDrawerActivity extends AppCompatActivity
         ButterKnife.bind(this);
 
         initToolbar();
-        //initDrawerViews();
 
         // Sets the default NavigationDrawerActivity to ViewInvestment
         selectItem(1);
@@ -191,8 +190,8 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        if (getFragmentManager().getBackStackEntryCount() > 0) {
-            getFragmentManager().popBackStack();
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            getSupportFragmentManager().popBackStack();
         } else {
             super.onBackPressed();
         }

@@ -48,7 +48,6 @@
         <activity
             android:name=".MainScreens.NavigationDrawerActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainScreens.SpecficInvestActivity"></activity>
     </application>
 
 </manifest>
