@@ -89,8 +89,6 @@ public class ViewInvestmentFragment extends Fragment {
         ButterKnife.bind(this, view);
 
         Typeface dinot = Typeface.createFromAsset(getActivity().getAssets(), "fonts/DINOT-Regular.ttf");
-        Typeface roboto_light = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Roboto-Light.ttf");
-        Typeface roboto_thin = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Roboto-Thin.ttf");
 
         // Setting type face for custom dollar textviews
         dollar_sign.setTypeface(dinot); dot.setTypeface(dinot);
@@ -110,10 +108,10 @@ public class ViewInvestmentFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //Intent used to be here
 
-                // Need to figure a way for the stack popping action
-                // dosent go back to the last fragment
+                // passing bundle so that we know which item is being pressed
+
+                // Replacing the frame with different fragments upon different list item click request
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 fragmentManager.
                         beginTransaction().
@@ -130,7 +128,6 @@ public class ViewInvestmentFragment extends Fragment {
 
         return view;
     }
-
 
     private void setUpDummyData() {
         list = new ArrayList<>();
