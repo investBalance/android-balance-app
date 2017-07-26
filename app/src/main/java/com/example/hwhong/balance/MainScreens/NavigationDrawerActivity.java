@@ -105,16 +105,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
         navigationView.setNavigationItemSelectedListener(this);
     }
-/*
-    @Override
-    public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
-*/
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -188,6 +179,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
         }
     }
 
+    // Needs this to go back to previous fragment
     @Override
     public void onBackPressed() {
         if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
