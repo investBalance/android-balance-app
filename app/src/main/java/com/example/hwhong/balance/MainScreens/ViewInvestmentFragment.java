@@ -122,7 +122,7 @@ public class ViewInvestmentFragment extends Fragment {
                                 R.anim.exit_to_left,
                                 R.anim.enter_from_left,
                                 R.anim.exit_to_right).
-                        replace(R.id.content_frame, new ConservativeFragment()).
+                        replace(R.id.content_frame, new SpecificInvestFragment()).
                         addToBackStack(TAG).
                         commit();
             }

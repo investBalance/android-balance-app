@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hwhong.balance.MainScreens.SpecificInvestFragment"
+    android:background="@drawable/view_investment_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="This is view specific investment"
+        android:textSize="30sp"
+        android:gravity="center_horizontal"/>
+
+
+
+</FrameLayout>
