@@ -28,6 +28,7 @@ public class SpecificInvestFragment extends Fragment {
     @BindView(R.id.cents)                           TextView cents_tv;
     @BindView(R.id.dollar_sign)                     TextView dollar_sign;
     @BindView(R.id.dot)                             TextView dot;
+    @BindView(R.id.current_worth)                   TextView current_worth;
 
     public SpecificInvestFragment() {
         // Required empty public constructor
@@ -70,6 +71,7 @@ public class SpecificInvestFragment extends Fragment {
         cents_tv.setTypeface(dinot);
         dollar_sign.setTypeface(dinot);
         dot.setTypeface(dinot);
+        current_worth.setTypeface(dinot);
 
         return view;
     }
