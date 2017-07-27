@@ -8,10 +8,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.hwhong.balance.MainScreens.DummyListTwo.DummyListTwoAdapter;
+import com.example.hwhong.balance.MainScreens.DummyListTwo.RowItem;
 import com.example.hwhong.balance.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,6 +35,10 @@ public class SpecificInvestFragment extends Fragment {
     @BindView(R.id.dollar_sign)                     TextView dollar_sign;
     @BindView(R.id.dot)                             TextView dot;
     @BindView(R.id.current_worth)                   TextView current_worth;
+    @BindView(R.id.specific_listview)               ListView listView;
+
+    private static ArrayList<RowItem> list;
+    private DummyListTwoAdapter adapter;
 
     public SpecificInvestFragment() {
         // Required empty public constructor
@@ -73,6 +83,12 @@ public class SpecificInvestFragment extends Fragment {
         dot.setTypeface(dinot);
         current_worth.setTypeface(dinot);
 
+        // Setting up dummy data
+        setUpDummy();
+        adapter = new DummyListTwoAdapter(getActivity().getApplicationContext(), list);
+        listView.setAdapter(adapter);
+
+
         return view;
     }
 
@@ -97,6 +113,14 @@ public class SpecificInvestFragment extends Fragment {
     private void parse(String value) {
         main_tv.setText(value.substring(1, value.indexOf(".")));
         cents_tv.setText(value.substring(value.indexOf(".")+1, value.length()));
+    }
+
+    private static void setUpDummy() {
+        list = new ArrayList<>();
+        list.add(new RowItem("SNAP", "$87.74", R.drawable.ic_human_rights));
+        list.add(new RowItem("TWTR", "$9.44", R.drawable.ic_peace));
+        list.add(new RowItem("GPRO", "$83.59", R.drawable.ic_sustainable));
+        list.add(new RowItem("TSLA", "$11.34", R.drawable.ic_environment));
     }
 
 }

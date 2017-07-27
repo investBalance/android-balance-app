@@ -1,13 +1,16 @@
-package com.example.hwhong.balance.MainScreens;
+package com.example.hwhong.balance.MainScreens.DummyListTwo;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.hwhong.balance.MainScreens.DummyListTwo.RowItem;
 import com.example.hwhong.balance.R;
 
 import java.util.ArrayList;
@@ -16,29 +19,29 @@ import java.util.ArrayList;
  * Created by hwhong on 7/25/17.
  */
 
-public class DummyListAdapter extends ArrayAdapter<Item> {
+public class DummyListTwoAdapter extends ArrayAdapter<RowItem> {
 
     private Context context;
-    private ArrayList<Item> allItems;
+    private ArrayList<RowItem> allRowItems;
 
     private LayoutInflater mInflater;
     private boolean mNotifyOnChange = true;
 
-    public DummyListAdapter(Context context, ArrayList<Item> mItems) {
+    public DummyListTwoAdapter(Context context, ArrayList<RowItem> mRowItems) {
         super(context, R.layout.list_item_layout);
         this.context = context;
-        this.allItems = new ArrayList<Item>(mItems);
+        this.allRowItems = new ArrayList<RowItem>(mRowItems);
         this.mInflater = LayoutInflater.from(context);
     }
 
     @Override
     public int getCount() {
-        return allItems .size();
+        return allRowItems .size();
     }
 
     @Override
-    public Item getItem(int position) {
-        return allItems .get(position);
+    public RowItem getItem(int position) {
+        return allRowItems .get(position);
     }
 
     @Override
@@ -48,8 +51,8 @@ public class DummyListAdapter extends ArrayAdapter<Item> {
     }
 
     @Override
-    public int getPosition(Item item) {
-        return allItems .indexOf(item);
+    public int getPosition(RowItem item) {
+        return allRowItems .indexOf(item);
     }
 
     @Override
@@ -72,17 +75,23 @@ public class DummyListAdapter extends ArrayAdapter<Item> {
             holder = new ViewHolder();
             switch (type) {
                 case 1:
-                    convertView = mInflater.inflate(R.layout.list_item_layout,parent, false);
-                    holder.name = (TextView) convertView.findViewById(R.id.item_names);
-                    holder.value = (TextView) convertView.findViewById(R.id.item_values);
+                    // Custom HERE
+                    convertView = mInflater.inflate(R.layout.row_item_layout,parent, false);
+                    holder.name = (TextView) convertView.findViewById(R.id.share_short_textview);
+                    holder.value = (TextView) convertView.findViewById(R.id.value_textview);
+                    holder.image = (ImageView) convertView.findViewById(R.id.value_image);
                     break;
             }
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.name.setText(allItems.get(position).getName());
-        holder.value.setText(allItems.get(position).getValue());
+        // Setting the item values
+        holder.name.setText(allRowItems.get(position).getName());
+        holder.value.setText(allRowItems.get(position).getValue());
+        holder.image.setImageResource(allRowItems.get(position).getImage());
+
+        // Customizing the views
         holder.name.setTypeface(roboto_light);
         holder.value.setTypeface(roboto_light);
         holder.pos = position;
@@ -105,6 +114,7 @@ public class DummyListAdapter extends ArrayAdapter<Item> {
 
         TextView name;
         TextView value;
+        ImageView image;
         int pos; //to store the position of the item within the list
     }
 }

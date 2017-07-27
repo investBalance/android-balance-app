@@ -1,7 +1,6 @@
 package com.example.hwhong.balance.MainScreens;
 
 
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,10 +13,9 @@ import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import com.example.hwhong.balance.PostSetUp.PagerSetUp.ConservativeFragment;
+import com.example.hwhong.balance.MainScreens.DummyListOne.DummyListOneAdapter;
+import com.example.hwhong.balance.MainScreens.DummyListOne.Item;
 import com.example.hwhong.balance.R;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -72,7 +70,7 @@ public class ViewInvestmentFragment extends Fragment {
 
     // For populating list data
     private ArrayList<Item> list;
-    private DummyListAdapter adapter;
+    private DummyListOneAdapter adapter;
 
     public ViewInvestmentFragment() {
         // Required empty public constructor
@@ -117,7 +115,7 @@ public class ViewInvestmentFragment extends Fragment {
         shares_button.setTypeface(dinot);
 
         setUpDummyData();
-        adapter = new DummyListAdapter(getActivity().getApplicationContext(), list);
+        adapter = new DummyListOneAdapter(getActivity().getApplicationContext(), list);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
