@@ -1,53 +1,41 @@
 package com.example.hwhong.balance.MainScreens;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link SpecificInvestFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link SpecificInvestFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class SpecificInvestFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+public class SpecificInvestFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
+
+    private String NAME;
+    private String VALUE;
+
+    @BindView(R.id.specific_investment_name)        TextView investment_name;
+    @BindView(R.id.main_value)                      TextView main_tv;
+    @BindView(R.id.cents)                           TextView cents_tv;
+    @BindView(R.id.dollar_sign)                     TextView dollar_sign;
+    @BindView(R.id.dot)                             TextView dot;
 
     public SpecificInvestFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment SpecificInvestFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static SpecificInvestFragment newInstance(String param1, String param2) {
         SpecificInvestFragment fragment = new SpecificInvestFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -56,16 +44,34 @@ public class SpecificInvestFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            NAME = getArguments().getString("NAME", "Fail");
+            VALUE = getArguments().getString("VALUE", "$999.9");
+        } else {
+            Toast.makeText(getActivity().getApplicationContext(), "Value not retrieved", Toast.LENGTH_SHORT).show();
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_specific_invest, container, false);
+        View view = inflater.inflate(R.layout.fragment_specific_invest, container, false);
+        ButterKnife.bind(this, view);
+
+        Typeface dinot = Typeface.createFromAsset(getActivity().getAssets(), "fonts/DINOT-Regular.ttf");
+
+        // The investment name heading
+        investment_name.setText(NAME);
+        // The value
+        parse(VALUE);
+
+        // For customizations
+        investment_name.setTypeface(dinot);
+        main_tv.setTypeface(dinot);
+        cents_tv.setTypeface(dinot);
+        dollar_sign.setTypeface(dinot);
+        dot.setTypeface(dinot);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -85,4 +91,10 @@ public class SpecificInvestFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    private void parse(String value) {
+        main_tv.setText(value.substring(1, value.indexOf(".")));
+        cents_tv.setText(value.substring(value.indexOf(".")+1, value.length()));
+    }
+
 }

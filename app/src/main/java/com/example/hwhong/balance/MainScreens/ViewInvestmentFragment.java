@@ -39,7 +39,22 @@ public class ViewInvestmentFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    // For dummy values
+
     private String TAG = "VIEW_INVESTMENT_TAG";
+    private String[] strs = new String[]{
+            "Small Company Stocks",
+            "Emerging Market Stocks",
+            "Large Company Stocks",
+            "Corporate Bonds",
+            "Real Estate Stocks"};
+    private String[] vals = new String[]{
+            "$287.74",
+            "$91.44",
+            "$401.34",
+            "$11.34",
+            "$49.04" };
+
 
     // View bindings
     @BindView(R.id.dollar_sign)             TextView dollar_sign;
@@ -113,6 +128,12 @@ public class ViewInvestmentFragment extends Fragment {
 
                 // Replacing the frame with different fragments upon different list item click request
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                SpecificInvestFragment fragment = new SpecificInvestFragment();
+                Bundle arguments = new Bundle();
+                arguments.putString("NAME", strs[position]);
+                arguments.putString("VALUE", vals[position]);
+                fragment.setArguments(arguments);
+
                 fragmentManager.
                         beginTransaction().
                         setCustomAnimations(
@@ -120,7 +141,7 @@ public class ViewInvestmentFragment extends Fragment {
                                 R.anim.exit_to_left,
                                 R.anim.enter_from_left,
                                 R.anim.exit_to_right).
-                        replace(R.id.content_frame, new SpecificInvestFragment()).
+                        replace(R.id.content_frame, fragment).
                         addToBackStack(TAG).
                         commit();
             }
