@@ -11,7 +11,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hwhong.balance.MainScreens.DummyListTwo.RowItem;
+import com.example.hwhong.balance.PostSetUp.PortfolioUIComponents.RandomizedAdapter;
 import com.example.hwhong.balance.R;
+import com.robinhood.spark.SparkView;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -26,6 +29,7 @@ public class DummyListTwoAdapter extends ArrayAdapter<RowItem> {
 
     private LayoutInflater mInflater;
     private boolean mNotifyOnChange = true;
+    private RandomizedAdapter adapter;
 
     public DummyListTwoAdapter(Context context, ArrayList<RowItem> mRowItems) {
         super(context, R.layout.list_item_layout);
@@ -80,16 +84,20 @@ public class DummyListTwoAdapter extends ArrayAdapter<RowItem> {
                     holder.name = (TextView) convertView.findViewById(R.id.share_short_textview);
                     holder.value = (TextView) convertView.findViewById(R.id.value_textview);
                     holder.image = (ImageView) convertView.findViewById(R.id.value_image);
+                    holder.sparkView = (SparkView) convertView.findViewById(R.id.sparkview_list_item);
                     break;
             }
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
+        adapter = new RandomizedAdapter();
         // Setting the item values
         holder.name.setText(allRowItems.get(position).getName());
         holder.value.setText(allRowItems.get(position).getValue());
-        holder.image.setImageResource(allRowItems.get(position).getImage());
+        Picasso.with(getContext()).load(allRowItems.get(position).getImage()).into(holder.image);
+        //holder.image.setImageResource(allRowItems.get(position).getImage());
+        holder.sparkView.setAdapter(adapter);
 
         // Customizing the views
         holder.name.setTypeface(roboto_light);
@@ -115,6 +123,7 @@ public class DummyListTwoAdapter extends ArrayAdapter<RowItem> {
         TextView name;
         TextView value;
         ImageView image;
+        SparkView sparkView;
         int pos; //to store the position of the item within the list
     }
 }

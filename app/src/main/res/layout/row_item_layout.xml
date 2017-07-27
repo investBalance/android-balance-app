@@ -46,4 +46,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
         app:layout_constraintVertical_bias="0.538" />
+
+    <com.robinhood.spark.SparkView
+        android:id="@+id/sparkview_list_item"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/value_image"
+        app:layout_constraintRight_toLeftOf="@+id/value_textview"
+        app:layout_constraintTop_toTopOf="parent"
+        app:spark_animateChanges="true"
+        app:spark_lineColor="@color/spark_view_color"
+        app:spark_scrubEnabled="true" />
 </android.support.constraint.ConstraintLayout>
