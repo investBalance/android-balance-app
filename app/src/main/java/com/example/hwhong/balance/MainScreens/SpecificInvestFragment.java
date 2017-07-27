@@ -14,7 +14,9 @@ import android.widget.Toast;
 
 import com.example.hwhong.balance.MainScreens.DummyListTwo.DummyListTwoAdapter;
 import com.example.hwhong.balance.MainScreens.DummyListTwo.RowItem;
+import com.example.hwhong.balance.PostSetUp.PortfolioUIComponents.RandomizedAdapter;
 import com.example.hwhong.balance.R;
+import com.robinhood.spark.SparkView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,9 +38,11 @@ public class SpecificInvestFragment extends Fragment {
     @BindView(R.id.dot)                             TextView dot;
     @BindView(R.id.current_worth)                   TextView current_worth;
     @BindView(R.id.specific_listview)               ListView listView;
+    @BindView(R.id.sparkview)                       SparkView sparkView;
 
     private static ArrayList<RowItem> list;
     private DummyListTwoAdapter adapter;
+    private RandomizedAdapter spark_adapter;
 
     public SpecificInvestFragment() {
         // Required empty public constructor
@@ -88,6 +92,9 @@ public class SpecificInvestFragment extends Fragment {
         adapter = new DummyListTwoAdapter(getActivity().getApplicationContext(), list);
         listView.setAdapter(adapter);
 
+        // for spark view
+        spark_adapter = new RandomizedAdapter();
+        sparkView.setAdapter(spark_adapter);
 
         return view;
     }
