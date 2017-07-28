@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
+import com.squareup.picasso.Picasso;
 
 /**
  * Created by hwhong on 7/28/17.
@@ -44,7 +45,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         // setCardBackgroundColor takes rgb values which reduces the color
         // because R.color value is not rgb
         holder.cardView.setCardBackgroundColor(ContextCompat.getColor(ctx, mData[position].getColor()));
-        holder.tech_icon.setImageResource(mData[position].getDrawable());
+        Picasso.with(ctx).load(mData[position].getDrawable()).into(holder.tech_icon);
     }
 
     // total number of cells
