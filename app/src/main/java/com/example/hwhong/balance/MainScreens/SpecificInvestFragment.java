@@ -5,9 +5,11 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +32,7 @@ public class SpecificInvestFragment extends Fragment {
 
     private String NAME;
     private String VALUE;
+    private String TAG = "SPECIFIC_INVESTMENT_TAG";
 
     @BindView(R.id.specific_investment_name)        TextView investment_name;
     @BindView(R.id.main_value)                      TextView main_tv;
@@ -96,6 +99,36 @@ public class SpecificInvestFragment extends Fragment {
         spark_adapter = new RandomizedAdapter();
         sparkView.setAdapter(spark_adapter);
 
+        // For list item selections
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                // passing bundle so that we know which item is being pressed
+
+                // Replacing the frame with different fragments upon different list item click request
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                CompanyFragment fragment = new CompanyFragment();
+
+                // Passing list item values
+                Bundle arguments = new Bundle();
+                arguments.putString("NAME", list.get(position).getName());
+                arguments.putString("VALUE", list.get(position).getValue());
+                fragment.setArguments(arguments);
+
+                fragmentManager.
+                        beginTransaction().
+                        setCustomAnimations(
+                                R.anim.enter_from_right,
+                                R.anim.exit_to_left,
+                                R.anim.enter_from_left,
+                                R.anim.exit_to_right).
+                        replace(R.id.content_frame, fragment).
+                        addToBackStack(TAG).
+                        commit();
+            }
+        });
+
         return view;
     }
 
@@ -117,6 +150,7 @@ public class SpecificInvestFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
+    // Parses the value and sets the value
     private void parse(String value) {
         main_tv.setText(value.substring(1, value.indexOf(".")));
         cents_tv.setText(value.substring(value.indexOf(".")+1, value.length()));
