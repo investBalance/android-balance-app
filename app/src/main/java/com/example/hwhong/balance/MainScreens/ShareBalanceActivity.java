@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Window;
 
 import com.example.hwhong.balance.MainScreens.GridView.Card;
+import com.example.hwhong.balance.MainScreens.GridView.ItemOffsetDecoration;
 import com.example.hwhong.balance.MainScreens.GridView.RecyclerViewAdapter;
 import com.example.hwhong.balance.PostSetUp.HeroPage;
 import com.example.hwhong.balance.R;
@@ -46,8 +47,10 @@ public class ShareBalanceActivity extends Activity {
         setUpData();
 
         adapter = new RecyclerViewAdapter(this, array);
+        ItemOffsetDecoration itemDecoration = new ItemOffsetDecoration(getApplicationContext(), R.dimen.item_offset);
         recyclerView.setLayoutManager(new GridLayoutManager(this, NUMBER_OF_COLUMNS));
         recyclerView.setAdapter(adapter);
+        recyclerView.addItemDecoration(itemDecoration);
     }
 
     private void setUpData() {

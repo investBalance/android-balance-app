@@ -1,14 +1,14 @@
 package com.example.hwhong.balance.MainScreens.GridView;
 
 import android.content.Context;
-import android.media.Image;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hwhong.balance.R;
 
@@ -21,11 +21,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private Card[] mData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
+    private Context ctx;
 
     // data is passed into the constructor
     public RecyclerViewAdapter(Context context, Card[] data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
+        ctx = context;
     }
 
     // inflates the cell layout from xml when needed
@@ -39,9 +41,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     // binds the data to the textview in each cell
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        //String animal = mData[position];
-        //holder.myTextView.setText(animal);
-        holder.cardView.setCardBackgroundColor(mData[position].getColor());
+        // setCardBackgroundColor takes rgb values which reduces the color
+        // because R.color value is not rgb
+        holder.cardView.setCardBackgroundColor(ContextCompat.getColor(ctx, mData[position].getColor()));
         holder.tech_icon.setImageResource(mData[position].getDrawable());
     }
 
