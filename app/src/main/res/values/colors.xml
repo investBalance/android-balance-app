@@ -32,4 +32,12 @@
 
     <color name="view_investment_background_start">#643DF7</color>
     <color name="view_investment_background_end">#D544D0</color>
+
+
+    <color name="twitter">#2182BF</color>
+    <color name="facebook">#314979</color>
+    <color name="google">#B0433C</color>
+    <color name="email">#4D4D4D</color>
+    <color name="sns">#39B939</color>
+    <color name="pinterest">#A11D25</color>
 </resources>

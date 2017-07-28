@@ -27,6 +27,7 @@ import android.view.WindowManager;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.hwhong.balance.PostSetUp.HeroPage;
 import com.example.hwhong.balance.PostSetUp.PagerSetUp.AggressiveFragment;
 import com.example.hwhong.balance.PostSetUp.PagerSetUp.ConservativeFragment;
 import com.example.hwhong.balance.PostSetUp.PagerSetUp.ModerateFragment;
@@ -140,7 +141,9 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 selectItem(2);
                 break;
             case R.id.nav_share:
-                selectItem(3);
+                Intent intent = new Intent(getApplicationContext(), ShareBalanceActivity.class);
+                startActivity(intent);
+                overridePendingTransition( R.anim.slide_in_up, R.anim.stay );
                 break;
             case R.id.nav_help:
                 selectItem(0);
