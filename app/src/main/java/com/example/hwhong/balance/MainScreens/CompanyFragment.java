@@ -37,6 +37,11 @@ public class CompanyFragment extends Fragment {
     @BindView(R.id.watch_but)                       Button watch;
     @BindView(R.id.favorite_but)                    Button favorite;
 
+    @BindView(R.id.shares_tv)                       TextView shares_tv;
+    @BindView(R.id.equity_tv)                       TextView equity_tv;
+    @BindView(R.id.balance_tv)                      TextView balance_tv;
+    @BindView(R.id.average_cost_tv)                 TextView average_tv;
+
     private RandomizedAdapter adapter;
 
     private OnFragmentInteractionListener mListener;
@@ -76,13 +81,7 @@ public class CompanyFragment extends Fragment {
         Typeface dinot = Typeface.createFromAsset(getActivity().getAssets(), "fonts/DINOT-Regular.ttf");
 
         // set Typefaces
-        main_tv.setTypeface(dinot);
-        cents_tv.setTypeface(dinot);
-        dollar_sign.setTypeface(dinot);
-        dot.setTypeface(dinot);
-
-        symb.setTypeface(roboto_light);
-        comp.setTypeface(roboto_thin);
+        typefaceCustom();
 
         // set textview values
         parse(VALUE);
@@ -100,6 +99,25 @@ public class CompanyFragment extends Fragment {
 
 
         return view;
+    }
+
+    private void typefaceCustom() {
+        Typeface roboto_light = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Roboto-Light.ttf");
+        Typeface roboto_thin = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Roboto-Thin.ttf");
+        Typeface dinot = Typeface.createFromAsset(getActivity().getAssets(), "fonts/DINOT-Regular.ttf");
+
+        shares_tv.setTypeface(dinot);
+        equity_tv.setTypeface(dinot);
+        balance_tv.setTypeface(dinot);
+        average_tv.setTypeface(dinot);
+
+        main_tv.setTypeface(dinot);
+        cents_tv.setTypeface(dinot);
+        dollar_sign.setTypeface(dinot);
+        dot.setTypeface(dinot);
+
+        symb.setTypeface(roboto_light);
+        comp.setTypeface(roboto_thin);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
