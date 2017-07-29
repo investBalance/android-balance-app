@@ -26,7 +26,7 @@ The following **required** functionality is completed:
    - [ ] Price ticker              [Robinhood library]
    - [ ] Stock visualization graph [Robinhood library --> Spark]
    - [ ] A tab menu that changes the stock visualization [Cw, 3m, 6m, 1y, 3y]
-- [ ] Social Media Page for sharing (Implemented as GridView)
+- [x] Social Media Page for sharing (Implemented as GridView)
 
 The following **additional** features are implemented:
 
@@ -35,6 +35,7 @@ The following **additional** features are implemented:
 ## Notes
 - Might need to fix the "Create an Account" button for better opacity
 - draggable list view alternatives? currently unable to collapse the list items. Will look into it.
+- need to makes the social media gridview better. Color is reduced
 
 ## Libraries Used
 - Butterknife from                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_Jake Wharton_**
