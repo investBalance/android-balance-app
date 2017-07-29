@@ -14,7 +14,7 @@ public class RandomizedAdapter extends SparkAdapter {
 
     public RandomizedAdapter() {
         random = new Random();
-        yData = new float[50];
+        yData = new float[10];
         randomize();
     }
 
