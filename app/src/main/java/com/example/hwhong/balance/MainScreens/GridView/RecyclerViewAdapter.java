@@ -70,6 +70,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         @Override
         public void onClick(View view) {
             if (mClickListener != null) mClickListener.onItemClick(view, getAdapterPosition());
+            Toast.makeText(ctx, "You've clicked " + mData[getAdapterPosition()].getName(), Toast.LENGTH_SHORT).show();
         }
     }
 

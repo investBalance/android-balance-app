@@ -47,6 +47,7 @@ public class ShareBalanceActivity extends Activity {
         setUpData();
 
         adapter = new RecyclerViewAdapter(this, array);
+        // For equal spacing on recyclerView
         ItemOffsetDecoration itemDecoration = new ItemOffsetDecoration(getApplicationContext(), R.dimen.item_offset);
         recyclerView.setLayoutManager(new GridLayoutManager(this, NUMBER_OF_COLUMNS));
         recyclerView.setAdapter(adapter);

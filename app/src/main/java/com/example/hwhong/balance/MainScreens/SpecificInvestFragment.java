@@ -114,6 +114,7 @@ public class SpecificInvestFragment extends Fragment {
                 Bundle arguments = new Bundle();
                 arguments.putString("NAME", list.get(position).getName());
                 arguments.putString("VALUE", list.get(position).getValue());
+                arguments.putString("COMP", list.get(position).getCompName());
                 fragment.setArguments(arguments);
 
                 fragmentManager.
@@ -158,10 +159,10 @@ public class SpecificInvestFragment extends Fragment {
 
     private static void setUpDummy() {
         list = new ArrayList<>();
-        list.add(new RowItem("SNAP", "$87.74", R.drawable.ic_human_rights));
-        list.add(new RowItem("TWTR", "$9.44", R.drawable.ic_peace));
-        list.add(new RowItem("GPRO", "$83.59", R.drawable.ic_sustainable));
-        list.add(new RowItem("TSLA", "$11.34", R.drawable.ic_environment));
+        list.add(new RowItem("SNAP", "$87.74", "Snap Inc.", R.drawable.ic_human_rights));
+        list.add(new RowItem("TWTR", "$9.44", "Twitter Inc", R.drawable.ic_peace));
+        list.add(new RowItem("GPRO", "$83.59", "GoPro Inc.", R.drawable.ic_sustainable));
+        list.add(new RowItem("TSLA", "$11.34", "Tesla Inc", R.drawable.ic_environment));
     }
 
 }
