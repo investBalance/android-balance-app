@@ -148,15 +148,114 @@
             app:layout_constraintTop_toBottomOf="@+id/company_sparkview"
             android:layout_marginEnd="16dp" />
 
-        <include layout="@layout/company_info_middle_section"
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="395dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:text="Kelsey's position"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/watch_but"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:id="@+id/balance_tv"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_width="135dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginLeft="8dp"
+            android:text="TextView"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/equity_value"
+            app:layout_constraintLeft_toRightOf="@+id/textView2"
+            android:layout_marginLeft="0dp" />
+
+        <TextView
+            android:id="@+id/equity_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv"
+            app:layout_constraintLeft_toRightOf="@+id/textView2"
+            android:layout_marginLeft="0dp" />
+
+        <TextView
+            android:id="@+id/equity_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/equity_tv"
+            app:layout_constraintLeft_toRightOf="@+id/textView2"
+            android:layout_marginLeft="0dp" />
+
+        <TextView
+            android:id="@+id/shares_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginLeft="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/watch_but" />
+            app:layout_constraintTop_toBottomOf="@+id/shares_tv"
+            android:layout_marginStart="16dp" />
+
+
+        <TextView
+            android:id="@+id/balance_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/balance_tv"
+            app:layout_constraintLeft_toRightOf="@+id/textView2"
+            android:layout_marginLeft="0dp" />
+
+
+        <TextView
+            android:id="@+id/average_cost_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/average_cost_tv"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:id="@+id/average_cost_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/shares_value"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:id="@+id/shares_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv"
+            android:layout_marginStart="16dp" />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="180dp"
+            app:layout_constraintRight_toRightOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 
