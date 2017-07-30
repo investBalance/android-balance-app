@@ -40,4 +40,6 @@
     <color name="email">#4D4D4D</color>
     <color name="sns">#39B939</color>
     <color name="pinterest">#A11D25</color>
+
+    <color name="text">#E0E0E0</color>
 </resources>

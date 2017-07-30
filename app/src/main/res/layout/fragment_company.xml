@@ -123,7 +123,7 @@
         <Button
             android:id="@+id/watch_but"
             android:layout_width="150dp"
-            android:layout_height="48dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="20dp"
             android:alpha="0.75"
@@ -137,7 +137,7 @@
         <Button
             android:id="@+id/favorite_but"
             android:layout_width="150dp"
-            android:layout_height="48dp"
+            android:layout_height="35dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="20dp"
             android:alpha="0.75"
@@ -155,7 +155,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="30dp"
             android:text="Kelsey's position"
-            android:textColor="@color/white"
+            android:textColor="@color/text"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/watch_but"
             android:layout_marginStart="16dp" />
@@ -165,7 +165,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="BALANCE VALUE (?)"
-            android:textColor="@color/white"
+            android:textColor="@color/text"
             android:textSize="12sp"
             android:layout_marginTop="24dp"
             app:layout_constraintTop_toBottomOf="@+id/equity_value"
@@ -177,7 +177,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="EQUITY VALUE"
-            android:textColor="@color/white"
+            android:textColor="@color/text"
             android:textSize="12sp"
             android:layout_marginTop="30dp"
             app:layout_constraintTop_toBottomOf="@+id/tv"
@@ -188,7 +188,8 @@
             android:id="@+id/equity_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="42.98"
+            android:textColor="@color/text"
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/equity_tv"
             app:layout_constraintLeft_toRightOf="@+id/textView2"
@@ -198,7 +199,8 @@
             android:id="@+id/shares_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="2"
+            android:textColor="@color/text"
             android:layout_marginLeft="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="8dp"
@@ -210,7 +212,8 @@
             android:id="@+id/balance_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="4.5"
+            android:textColor="@color/text"
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/balance_tv"
             app:layout_constraintLeft_toRightOf="@+id/textView2"
@@ -221,7 +224,8 @@
             android:id="@+id/average_cost_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="21.49"
+            android:textColor="@color/text"
             android:layout_marginLeft="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="8dp"
@@ -233,7 +237,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="AVG COST $"
-            android:textColor="@color/white"
+            android:textColor="@color/text"
             android:textSize="12sp"
             android:layout_marginLeft="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -246,7 +250,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SHARES"
-            android:textColor="@color/white"
+            android:textColor="@color/text"
             android:textSize="12sp"
             android:layout_marginLeft="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -264,6 +268,68 @@
             android:layout_marginBottom="8dp"
             android:layout_marginRight="180dp"
             app:layout_constraintRight_toRightOf="parent" />
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textView2"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            android:layout_marginTop="83dp"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SNAP NEWS"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                android:layout_marginTop="45dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/title" />
+
+            <TextView
+                android:id="@+id/one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/one"
+                android:textColor="@color/text"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                android:layout_marginLeft="0dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/two"
+                android:textColor="@color/text"
+                android:layout_marginLeft="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/one" />
+
+            <TextView
+                android:id="@+id/three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/three"
+                android:textColor="@color/text"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/two"
+                android:layout_marginLeft="0dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+
 
     </android.support.constraint.ConstraintLayout>
 

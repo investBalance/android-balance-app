@@ -42,6 +42,17 @@ public class CompanyFragment extends Fragment {
     @BindView(R.id.balance_tv)                      TextView balance_tv;
     @BindView(R.id.average_cost_tv)                 TextView average_tv;
 
+    @BindView(R.id.title)                           TextView title;
+    @BindView(R.id.one)                             TextView one;
+    @BindView(R.id.two)                             TextView two;
+    @BindView(R.id.three)                           TextView three;
+
+    @BindView(R.id.shares_value)                    TextView shares_val;
+    @BindView(R.id.equity_value)                    TextView equity_val;
+    @BindView(R.id.balance_value)                   TextView balance_val;
+    @BindView(R.id.average_cost_value)              TextView average_val;
+
+
     private RandomizedAdapter adapter;
 
     private OnFragmentInteractionListener mListener;
@@ -118,6 +129,16 @@ public class CompanyFragment extends Fragment {
 
         symb.setTypeface(roboto_light);
         comp.setTypeface(roboto_thin);
+
+        title.setTypeface(roboto_light);
+        one.setTypeface(roboto_light);
+        two.setTypeface(roboto_light);
+        three.setTypeface(roboto_light);
+
+        shares_val.setTypeface(dinot);
+        equity_val.setTypeface(dinot);
+        balance_val.setTypeface(dinot);
+        average_val.setTypeface(dinot);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

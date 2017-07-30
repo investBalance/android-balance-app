@@ -16,9 +16,9 @@
             android:layout_height="wrap_content"
             android:text="SNAP NEWS"
             android:textStyle="bold"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="29dp"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             android:id="@+id/title" />
 
@@ -26,34 +26,31 @@
             android:id="@+id/one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NEWS: Snap Inc forms a new foundation supporting
-arts and education, vows to donate up to 13Mn shares"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/title" />
+            android:text="@string/one"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            android:layout_marginLeft="0dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
         <TextView
             android:id="@+id/two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="INVESTOR ALERT: Brower Priven Encourages Shareholders
-Who Have Losses in excess of $10,000 From Investment in SNAP, INC to contact
-Brower Priven Before The Lead Plaintiff Deadline"
-            app:layout_constraintTop_toBottomOf="@+id/one"
+            android:text="@string/two"
             android:layout_marginLeft="0dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginTop="18dp" />
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/one" />
 
         <TextView
-            android:id="@+id/three"
+            android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NEWS: Good looks - Snapchat, Facebook roll out built
-in charitable functions"
-            app:layout_constraintTop_toBottomOf="two"
-            tools:layout_editor_absoluteX="-13dp" />
-
+            android:text="@string/three"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/two"
+            android:layout_marginLeft="0dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
 
     </android.support.constraint.ConstraintLayout>

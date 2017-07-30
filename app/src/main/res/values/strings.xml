@@ -61,4 +61,12 @@
     <string name="action_settings">Settings</string>
 
     <string name="view_investment_explain_text">Kelsey, did you know that Google plans to run entirely on clean energy in 2017? You value the environment so we\'ve included Google in your ETF portfolio. Go green!</string>
+
+    <string name="one">NEWS: Snap Inc forms a new foundation supporting
+arts and education, vows to donate up to 13Mn shares</string>
+    <string name="two">INVESTOR ALERT: Brower Priven Encourages Shareholders
+Who Have Losses in excess of $10,000 From Investment in SNAP, INC to contact
+Brower Priven Before The Lead Plaintiff Deadline</string>
+    <string name="three">NEWS: Good looks - Snapchat, Facebook roll out built
+in charitable functions</string>
 </resources>
