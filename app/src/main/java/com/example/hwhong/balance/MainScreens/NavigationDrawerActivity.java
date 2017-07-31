@@ -167,7 +167,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 fragment = new ViewInvestmentFragment();
                 break;
             case 2:
-                fragment = new ConservativeFragment();
+                fragment = new SettingsFragment();
                 break;
             default:
                 fragment = new ModerateFragment();
