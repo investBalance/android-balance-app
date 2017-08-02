@@ -1,5 +1,6 @@
 package com.example.hwhong.balance.PostSetUp;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -8,11 +9,13 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.hwhong.balance.MainScreens.NavigationDrawerActivity;
 import com.example.hwhong.balance.R;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class CreditCardActivity extends AppCompatActivity {
 
@@ -46,5 +49,10 @@ public class CreditCardActivity extends AppCompatActivity {
         detail.setTypeface(roboto_thin);
         cdc_more_info.setTypeface(roboto_thin);
         lock_text.setTypeface(roboto_thin);
+    }
+
+    @OnClick(R.id.later_button)
+    public void continueFromCreditCard(){
+        startActivity(new Intent(getApplicationContext(), NavigationDrawerActivity.class));
     }
 }
