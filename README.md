@@ -21,11 +21,11 @@ The following **required** functionality is completed:
 - [x] Choosing of personal values
 - [x] Choosing of Stock behaviour (Conservative, Moderate, Aggressive)
 - [ ] Linking different bank accounts [Grid View or List View]
-- [ ] Main stock View page
-   - [ ] Navigation Drawer
-   - [ ] Price ticker              [Robinhood library]
-   - [ ] Stock visualization graph [Robinhood library --> Spark]
-   - [ ] A tab menu that changes the stock visualization [Cw, 3m, 6m, 1y, 3y]
+- [x] Main stock View page
+   - [x] Navigation Drawer
+   - [x] Price ticker              [Robinhood library]
+   - [x] Stock visualization graph [Robinhood library --> Spark]
+   - [x] A tab menu that changes the stock visualization [Cw, 3m, 6m, 1y, 3y]
 - [x] Social Media Page for sharing (Implemented as GridView)
 
 The following **additional** features are implemented:
