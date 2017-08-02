@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.hwhong.balance.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -61,8 +62,7 @@ public class SettingsFragment extends Fragment {
         ButterKnife.bind(this, view);
 
         styling();
-
-
+        settingsItemSetup();
 
         return view;
     }
@@ -73,7 +73,39 @@ public class SettingsFragment extends Fragment {
     }
 
     private void  settingsItemSetup() {
+        ArrayList<String> device = new ArrayList<>();
+        device.add("Touch ID and PIN");
+        device.add("Two-Factor Authentication");
 
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, device);
+
+        ArrayList<String> personal = new ArrayList<>();
+        personal.add("Email");
+        personal.add("Address");
+        personal.add("Phone");
+        personal.add("Password");
+
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, personal);
+
+        ArrayList<String> banking = new ArrayList<>();
+        banking.add("History");
+        banking.add("Connected Accounts");
+
+        ArrayAdapter<String> adapter3 = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, banking);
+
+        ArrayList<String> profile = new ArrayList<>();
+        profile.add("My Values");
+        profile.add("Investment Styles");
+        profile.add("Help");
+        profile.add("Disclosures");
+        profile.add("FAQ");
+
+        ArrayAdapter<String> adapter4 = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, profile);
+
+        one.setAdapter(adapter1);
+        two.setAdapter(adapter2);
+        three.setAdapter(adapter3);
+        four.setAdapter(adapter4);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
