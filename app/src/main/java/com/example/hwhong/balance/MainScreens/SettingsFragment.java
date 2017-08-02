@@ -8,21 +8,17 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.hwhong.balance.R;
 
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link SettingsFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link SettingsFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class SettingsFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,6 +33,12 @@ public class SettingsFragment extends Fragment {
 
     // View elements
     @BindView(R.id.heading)                     TextView heading;
+
+
+    @BindView(R.id.listview_one)                ListView one;
+    @BindView(R.id.listview_two)                ListView two;
+    @BindView(R.id.listview_three)              ListView three;
+    @BindView(R.id.listview_four)               ListView four;
 
     public SettingsFragment() {
         // Required empty public constructor
@@ -58,6 +60,8 @@ public class SettingsFragment extends Fragment {
         View  view = inflater.inflate(R.layout.fragment_settings, container, false);
         ButterKnife.bind(this, view);
 
+        styling();
+
 
 
         return view;
@@ -66,6 +70,10 @@ public class SettingsFragment extends Fragment {
     private void styling() {
         Typeface dinot = Typeface.createFromAsset(getActivity().getAssets(), "fonts/DINOT-Regular.ttf");
         heading.setTypeface(dinot);
+    }
+
+    private void  settingsItemSetup() {
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
