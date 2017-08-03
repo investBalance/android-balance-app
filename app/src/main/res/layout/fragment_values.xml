@@ -69,7 +69,7 @@
         android:alpha="0.75"
         android:background="@drawable/button"
         android:gravity="center"
-        android:text="@string/set_continue_but"
+        android:text="Set"
         android:textColor="@color/black"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
