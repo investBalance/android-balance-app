@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.hwhong.balance.MainScreens.NavigationDrawerActivity;
 import com.example.hwhong.balance.PostSetUp.CreditCardActivity;
@@ -39,16 +40,17 @@ public class MainActivity extends AppCompatActivity {
 
         Picasso.with(getApplicationContext()).load(R.drawable.activity_main_wallpaper).into(wallpaper);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        getSupportActionBar().hide();
     }
 
     @OnClick(R.id.createAccountBut)
     public void createAccount() {
         Intent intent = new Intent(getApplicationContext(), EmailActivity.class);
         startActivity(intent);
+    }
 
-        //Intent intent = new Intent(getApplicationContext(), VerificationActivity.class);
-        //startActivity(intent);
+    @OnClick(R.id.logInBut)
+    public void logIn() {
+        Toast.makeText(getApplicationContext(), "Logging In", Toast.LENGTH_SHORT).show();
     }
 }
