@@ -26,6 +26,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hwhong.balance.PostSetUp.HeroPage;
 import com.example.hwhong.balance.PostSetUp.PagerSetUp.AggressiveFragment;
@@ -147,6 +148,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 break;
             case R.id.nav_help:
                 selectItem(0);
+                Toast.makeText(getApplicationContext(), "Help here", Toast.LENGTH_SHORT).show();
                 break;
         }
 
