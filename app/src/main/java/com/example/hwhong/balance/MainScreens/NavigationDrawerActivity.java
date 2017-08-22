@@ -172,6 +172,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 fragment = new SettingsFragment();
                 break;
             default:
+
                 fragment = new ModerateFragment();
                 break;
         }
