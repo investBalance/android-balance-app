@@ -34,13 +34,10 @@ public class SettingsFragment extends Fragment {
 
     // View elements
     @BindView(R.id.heading)                     TextView heading;
-
-
     @BindView(R.id.listview_one)                ListView one;
     @BindView(R.id.listview_two)                ListView two;
     @BindView(R.id.listview_three)              ListView three;
     @BindView(R.id.listview_four)               ListView four;
-
     @BindView(R.id.device)                      TextView device;
     @BindView(R.id.personal)                    TextView personal;
     @BindView(R.id.banking)                     TextView banking;
