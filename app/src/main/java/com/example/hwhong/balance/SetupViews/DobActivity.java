@@ -58,9 +58,8 @@ public class DobActivity extends AppCompatActivity {
         if(TextUtils.isEmpty(dob_input.getText().toString())) {
             Toast.makeText(getApplicationContext(), "Please enter all fields", Toast.LENGTH_SHORT).show();
         }
-        if(!TextUtils.isEmpty(dob_input.getText().toString())) {
-            startActivity(intent);
-        }
+        if(!TextUtils.isEmpty(dob_input.getText().toString())) startActivity(intent);
+
     }
 
 }
