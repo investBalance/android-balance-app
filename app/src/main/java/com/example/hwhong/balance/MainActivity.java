@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.logInBut)
     public void logIn() {
+        //startActivity(new Intent(getApplicationContext(), PagerActivity.class));
         Toast.makeText(getApplicationContext(), "Logging In", Toast.LENGTH_SHORT).show();
     }
 }

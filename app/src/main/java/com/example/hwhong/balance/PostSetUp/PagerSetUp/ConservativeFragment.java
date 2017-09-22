@@ -129,7 +129,7 @@ public class ConservativeFragment extends Fragment {
         bar1.setMax(100);
         bar1.setVisibility(View.VISIBLE);
         bar1.setProgress(35);
-        bar1.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
+        //bar1.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
 
         bar2.setMax(100);
         bar1.setVisibility(View.VISIBLE);
