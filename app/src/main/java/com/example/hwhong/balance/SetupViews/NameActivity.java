@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.view.Window;
 import android.widget.EditText;
@@ -52,6 +53,10 @@ public class NameActivity extends AppCompatActivity {
         lastname.getBackground().mutate().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
         firstname.setHintTextColor(getResources().getColor(R.color.white));
         lastname.setHintTextColor(getResources().getColor(R.color.white));
+
+        // for automatic capitalization of first letter in editTexts
+        firstname.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
+        lastname.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
     }
 
     @OnClick(R.id.name_continue)
