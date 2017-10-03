@@ -1,9 +1,11 @@
 package com.example.hwhong.balance.MainScreens;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import com.example.hwhong.balance.PostSetUp.PagerSetUp.AggressiveFragment;
 import com.example.hwhong.balance.R;
 
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class ValuesFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
@@ -62,5 +65,14 @@ public class ValuesFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
+    }
+
+    @OnClick(R.id.values_continue)
+    public void continueFromValues() {
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.content_frame, new ViewInvestmentFragment());
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+        ft.addToBackStack(null);
+        ft.commit();
     }
 }
